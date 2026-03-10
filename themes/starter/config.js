@@ -3,8 +3,8 @@
  */
 const CONFIG = {
   // 默认只展示Logo文字，如果设置了logo图片，会在文字左侧显示图标
-  STARTER_LOGO: '/themes/starter/components/svg/starter-logo.svg', // 普通logo图片 示例：/images/starter/logo/logo.svg
-  STARTER_LOGO_WHITE: '', // 透明底浅色logo 示例： /images/starter/logo/logo-white.svg
+  STARTER_LOGO: '/images/starter/logo/logo.png', // 普通logo图片
+  STARTER_LOGO_WHITE: '/images/starter/logo/logo.png', // 透明底浅色logo
 
   // MENU ， 菜单部分不在此处配置，请在Notion数据库中添加MENU
 
@@ -21,7 +21,7 @@ const CONFIG = {
   STARTER_HERO_BUTTON_1_ICON: '/themes/starter/components/svg/whatsapp.svg', // 英雄区按钮1的图标，不需要则留空
 
   // 英雄区配图，如需隐藏，改为空值即可 ''
-  STARTER_HERO_PREVIEW_IMAGE: '/images/starter/hero/hero-image.webp', // 产品预览图 ，默认读取public目录下图片
+  STARTER_HERO_PREVIEW_IMAGE: '/images/starter/hero/cnl.jpg', // 产品预览图 ，默认读取public目录下图片
   STARTER_HERO_BANNER_IMAGE: '', // hero区下方的全宽图
 
   // 顶部右侧导航按钮
