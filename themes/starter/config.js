@@ -3,7 +3,7 @@
  */
 const CONFIG = {
   // 默认只展示Logo文字，如果设置了logo图片，会在文字左侧显示图标
-  STARTER_LOGO: '🀄️', // 普通logo图片 示例：/images/starter/logo/logo.svg
+  STARTER_LOGO: '/themes/starter/components/svg/starter-logo.svg', // 普通logo图片 示例：/images/starter/logo/logo.svg
   STARTER_LOGO_WHITE: '', // 透明底浅色logo 示例： /images/starter/logo/logo-white.svg
 
   // MENU ， 菜单部分不在此处配置，请在Notion数据库中添加MENU
@@ -11,12 +11,7 @@ const CONFIG = {
   // 英雄区块导航
   STARTER_HERO_ENABLE: true, // 开启英雄区
   STARTER_HERO_TITLE_1: 'Welcome to Jade Chinese Club!', // 英雄区文字
-  STARTER_HERO_TITLE_2: 'Learn Chinese with Jade  
-  Free beginner Chinese learning resources  
-  Structured learning: HSK & HSKK exam preparation 
-  Business Chinese & Chinese business etiquette  
-  Customized one-on-one online lessons  
-  Comprehensive improvement in speaking, writing, listening, and reading', // 英雄区文字
+  STARTER_HERO_TITLE_2: 'Learn Chinese with Jade ', // 英雄区文字
   // 英雄区两个按钮，如果TEXT留空则隐藏按钮
   STARTER_HERO_BUTTON_1_TEXT: 'Contact me', // 英雄区按钮
   STARTER_HERO_BUTTON_1_URL:
