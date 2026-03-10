@@ -9,7 +9,7 @@ export const Team = () => {
       {/* <!-- ====== Team Section Start --> */}
       <section
         id='team'
-        className='overflow-hidden bg-gray-1 pb-12 pt-20 dark:bg-dark-2 lg:pb-[90px] lg:pt-[120px]'>
+        className='overflow-hidden bg-gray-1 pb-12 pt-20 dark:bg-black lg:pb-[90px] lg:pt-[120px]'>
         <div className='container mx-auto'>
           <div className='-mx-4 flex flex-wrap'>
             <div className='w-full px-4'>
@@ -36,7 +36,7 @@ export const Team = () => {
                 <div
                   key={index}
                   className='w-full px-4 sm:w-1/2 lg:w-1/4 xl:w-1/4'>
-                  <div className='group mb-8 rounded-xl bg-white px-5 pb-10 pt-12 shadow-testimonial dark:bg-dark dark:shadow-none'>
+                  <div className='group mb-8 rounded-xl bg-white px-5 pb-10 pt-12 shadow-testimonial dark:bg-[#111] dark:shadow-none'>
                     {/* 头像 */}
                     <div className='relative z-10 mx-auto mb-5 h-[120px] w-[120px]'>
                       <img

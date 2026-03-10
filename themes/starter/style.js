@@ -191,10 +191,10 @@ const Style = () => {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-:is(.dark .common-carousel .swiper-button-next),:is(.dark 
+:is(.dark .common-carousel .swiper-button-next),:is(.dark
 .common-carousel .swiper-button-prev){
   --tw-bg-opacity: 1;
-  background-color: rgb(17 25 40 / var(--tw-bg-opacity));
+  background-color: rgb(17 17 17 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }

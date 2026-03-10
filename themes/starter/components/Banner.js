@@ -6,7 +6,7 @@ export const Banner = ({ title, description }) => {
   return (
     <>
       {/* <!-- ====== Banner Section Start --> */}
-      <div className='relative z-10 overflow-hidden pb-[60px] pt-[120px] dark:bg-dark md:pt-[130px] lg:pt-[160px]'>
+      <div className='relative z-10 overflow-hidden pb-[60px] pt-[120px] dark:bg-black md:pt-[130px] lg:pt-[160px]'>
         <div className='absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-stroke/0 via-stroke to-stroke/0 dark:via-dark-3'></div>
         <div className='container'>
           <div className='flex flex-wrap items-center -mx-4'>

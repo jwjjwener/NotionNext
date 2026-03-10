@@ -11,7 +11,7 @@ export const Blog = ({ posts }) => {
   return (
     <>
       {/* <!-- ====== Blog Section Start --> */}
-      <section className='bg-white pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]'>
+      <section className='bg-white pb-10 pt-20 dark:bg-black lg:pb-20 lg:pt-[120px]'>
         <div className='container mx-auto'>
           {/* 区块标题文字 */}
           <div className='-mx-4 flex flex-wrap justify-center'>

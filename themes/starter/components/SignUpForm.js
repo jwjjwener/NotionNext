@@ -7,12 +7,12 @@ import { Logo } from './Logo'
 export const SignUpForm = () => {
   return <>
   {/* <!-- ====== Forms Section Start --> */}
-  <section className="bg-[#F4F7FF] py-14 lg:py-[90px] dark:bg-dark">
+  <section className="bg-[#F4F7FF] py-14 lg:py-[90px] dark:bg-black">
     <div className="container">
       <div className="flex flex-wrap -mx-4">
         <div className="w-full px-4">
           <div
-            className="wow fadeInUp relative mx-auto max-w-[525px] overflow-hidden rounded-xl shadow-form bg-white dark:bg-dark-2 py-14 px-8 text-center sm:px-12 md:px-[60px]"
+            className="wow fadeInUp relative mx-auto max-w-[525px] overflow-hidden rounded-xl shadow-form bg-white dark:bg-[#111] py-14 px-8 text-center sm:px-12 md:px-[60px]"
             data-wow-delay=".15s">
             <div className="mb-10 text-center">
               <a href="#" className="mx-auto inline-block max-w-[160px]">
@@ -39,7 +39,7 @@ export const SignUpForm = () => {
             </form>
             <span className="relative block text-center z-1 mb-7">
               <span className="absolute left-0 block w-full h-px -z-1 top-1/2 bg-stroke dark:bg-dark-3"></span>
-              <span className="relative z-10 inline-block px-3 text-base bg-white dark:bg-dark-2 text-body-secondary">Connect With</span>
+              <span className="relative z-10 inline-block px-3 text-base bg-white dark:bg-[#111] text-body-secondary">Connect With</span>
             </span>
             <ul className="flex justify-between -mx-2 mb-9">
               <li className="w-full px-2">

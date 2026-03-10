@@ -10,8 +10,8 @@ export const Contact = () => {
     <>
       {/* <!-- ====== Contact Start ====== --> */}
       <section id='contact' className='relative py-20 md:py-[120px]'>
-        <div className='absolute left-0 top-0 -z-[1] h-full w-full dark:bg-dark'></div>
-        <div className='absolute left-0 top-0 -z-[1] h-1/2 w-full bg-[#E9F9FF] dark:bg-dark-700 lg:h-[45%] xl:h-1/2'></div>
+        <div className='absolute left-0 top-0 -z-[1] h-full w-full dark:bg-black'></div>
+        <div className='absolute left-0 top-0 -z-[1] h-1/2 w-full bg-[#FFF0F3] dark:bg-[#111] lg:h-[45%] xl:h-1/2'></div>
         <div className='container px-4'>
           <div className='-mx-4 flex flex-wrap items-center'>
             {/* 联系方式左侧文字 */}
@@ -73,7 +73,7 @@ export const Contact = () => {
                 {/* 联系方式右侧留言 */}
                 <div className='w-full px-4 lg:w-5/12 xl:w-4/12'>
                   <div
-                    className='wow fadeInUp rounded-lg bg-white px-8 py-10 shadow-testimonial dark:bg-dark-2 dark:shadow-none sm:px-10 sm:py-12 md:p-[60px] lg:p-10 lg:px-10 lg:py-12 2xl:p-[60px]'
+                    className='wow fadeInUp rounded-lg bg-white px-8 py-10 shadow-testimonial dark:bg-[#111] dark:shadow-none sm:px-10 sm:py-12 md:p-[60px] lg:p-10 lg:px-10 lg:py-12 2xl:p-[60px]'
                     data-wow-delay='.2s'>
                     {/* 自定义的留言表单 、 需要对接接口 */}
                     {/* <MessageForm/> */}

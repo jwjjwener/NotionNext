@@ -129,7 +129,7 @@ const LayoutIndex = props => {
         <>
           <Blog posts={posts} />
           <div className='container mx-auto flex justify-end mb-4'>
-            <SmartLink className='text-lg underline' href={'/archive'}>
+            <SmartLink className='text-lg underline dark:text-white hover:text-primary' href={'/archive'}>
               <span>{locale.COMMON.MORE}</span>
               <i className='ml-2 fas fa-arrow-right' />
             </SmartLink>
@@ -246,7 +246,7 @@ const LayoutSearch = props => {
   }, [])
   return (
     <>
-      <section className='max-w-7xl mx-auto bg-white pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]'>
+      <section className='max-w-7xl mx-auto bg-white pb-10 pt-20 dark:bg-black lg:pb-20 lg:pt-[120px]'>
         <SearchInput {...props} />
         {currentSearch && <Blog {...props} />}
       </section>
@@ -275,7 +275,7 @@ const Layout404 = props => {
   return (
     <>
       {/* <!-- ====== 404 Section Start --> */}
-      <section className='bg-white py-20 dark:bg-dark-2 lg:py-[110px]'>
+      <section className='bg-white py-20 dark:bg-black lg:py-[110px]'>
         <div className='container mx-auto'>
           <div className='flex flex-wrap items-center -mx-4'>
             <div className='w-full px-4 md:w-5/12 lg:w-6/12'>
@@ -323,7 +323,7 @@ const LayoutPostList = props => {
   return (
     <>
       {/* <!-- ====== Blog Section Start --> */}
-      <section className='bg-white pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]'>
+      <section className='bg-white pb-10 pt-20 dark:bg-black lg:pb-20 lg:pt-[120px]'>
         <div className='container mx-auto'>
           {/* 区块标题文字 */}
           <div className='-mx-4 flex flex-wrap justify-center'>
@@ -405,7 +405,7 @@ const LayoutCategoryIndex = props => {
   const { categoryOptions } = props
   const { locale } = useGlobal()
   return (
-    <section className='bg-white pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]'>
+    <section className='bg-white pb-10 pt-20 dark:bg-black lg:pb-20 lg:pt-[120px]'>
       <div className='container mx-auto  min-h-96'>
         <span className='mb-2 text-lg font-semibold text-primary flex justify-center items-center '>
           {locale.COMMON.CATEGORY}
@@ -445,7 +445,7 @@ const LayoutTagIndex = props => {
   const { tagOptions } = props
   const { locale } = useGlobal()
   return (
-    <section className='bg-white pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]'>
+    <section className='bg-white pb-10 pt-20 dark:bg-black lg:pb-20 lg:pt-[120px]'>
       <div className='container mx-auto  min-h-96'>
         <span className='mb-2 text-lg font-semibold text-primary flex justify-center items-center '>
           {locale.COMMON.TAGS}
