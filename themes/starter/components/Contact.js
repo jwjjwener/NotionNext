@@ -11,7 +11,7 @@ export const Contact = () => {
       {/* <!-- ====== Contact Start ====== --> */}
       <section id='contact' className='relative py-20 md:py-[120px]'>
         <div className='absolute left-0 top-0 -z-[1] h-full w-full dark:bg-black'></div>
-        <div className='absolute left-0 top-0 -z-[1] h-1/2 w-full bg-[#FFF0F3] dark:bg-[#111] lg:h-[45%] xl:h-1/2'></div>
+        <div className='absolute left-0 top-0 -z-[1] h-1/2 w-full bg-gray-1 dark:bg-[#111] lg:h-[45%] xl:h-1/2'></div>
         <div className='container px-4'>
           <div className='-mx-4 flex flex-wrap items-center'>
             {/* 联系方式左侧文字 */}

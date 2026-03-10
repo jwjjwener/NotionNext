@@ -51,7 +51,7 @@ const Style = () => {
   
   #theme-starter .sticky #navbarCollapse li > a:hover{
     --tw-text-opacity: 1;
-    color: rgb(55 88 249 / var(--tw-text-opacity));
+    color: rgb(15 118 110 / var(--tw-text-opacity));
     opacity: 1;
   }
 
@@ -67,7 +67,7 @@ const Style = () => {
   
   :is(.dark #theme-starter .sticky #navbarCollapse li > a:hover){
     --tw-text-opacity: 1;
-    color: rgb(55 88 249 / var(--tw-text-opacity));
+    color: rgb(15 118 110 / var(--tw-text-opacity));
   }
 
   :is(.dark #theme-starter .sticky #navbarCollapse li > button){
@@ -81,7 +81,7 @@ const Style = () => {
   
   #theme-starter .sticky #navbarCollapse li .ud-menu-scroll.active{
     --tw-text-opacity: 1;
-    color: rgb(55 88 249 / var(--tw-text-opacity));
+    color: rgb(15 118 110 / var(--tw-text-opacity));
     opacity: 1;
   }
   
@@ -92,7 +92,7 @@ const Style = () => {
   
   #theme-starter .sticky .loginBtn:hover{
     --tw-text-opacity: 1;
-    color: rgb(55 88 249 / var(--tw-text-opacity));
+    color: rgb(15 118 110 / var(--tw-text-opacity));
     opacity: 1;
   }
   
@@ -103,19 +103,19 @@ const Style = () => {
   
   :is(.dark #theme-starter .sticky .loginBtn:hover){
     --tw-text-opacity: 1;
-    color: rgb(55 88 249 / var(--tw-text-opacity));
+    color: rgb(15 118 110 / var(--tw-text-opacity));
   }
   
   #theme-starter .sticky .signUpBtn{
     --tw-bg-opacity: 1;
-    background-color: rgb(55 88 249 / var(--tw-bg-opacity));
+    background-color: rgb(15 118 110 / var(--tw-bg-opacity));
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
   
   #theme-starter .sticky .signUpBtn:hover{
     --tw-bg-opacity: 1;
-    background-color: rgb(27 68 200 / var(--tw-bg-opacity));
+    background-color: rgb(13 101 96 / var(--tw-bg-opacity));
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
