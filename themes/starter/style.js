@@ -20,7 +20,7 @@ const Style = () => {
   }
   
   :is(.dark #theme-starter .sticky){
-    background-color: rgb(17 25 40 / 0.8);
+    background-color: rgb(0 0 0 / 0.8);
   }
   
   #theme-starter .sticky {

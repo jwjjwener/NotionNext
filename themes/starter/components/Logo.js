@@ -7,6 +7,8 @@ import throttle from 'lodash.throttle'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
+import CONFIG from '../config'
+
 /**
  * 站点图标
  * @returns
@@ -14,8 +16,9 @@ import { useEffect, useState } from 'react'
 export const Logo = props => {
   const { white, NOTION_CONFIG } = props
   const router = useRouter()
-  const logoWhite = siteConfig('STARTER_LOGO_WHITE')
-  const logoNormal = siteConfig('STARTER_LOGO')
+  // 直接从本地config读取logo，避免被Notion CONFIG覆盖
+  const logoWhite = CONFIG.STARTER_LOGO_WHITE || CONFIG.STARTER_LOGO || '/images/starter/logo/logo.png'
+  const logoNormal = CONFIG.STARTER_LOGO || '/images/starter/logo/logo.png'
   const { isDarkMode } = useGlobal()
   const [logo, setLogo] = useState(logoWhite)
   const [logoTextColor, setLogoTextColor] = useState('text-white')
