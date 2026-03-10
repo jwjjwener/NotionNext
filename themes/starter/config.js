@@ -11,7 +11,12 @@ const CONFIG = {
   // 英雄区块导航
   STARTER_HERO_ENABLE: true, // 开启英雄区
   STARTER_HERO_TITLE_1: 'Welcome to Jade Chinese Club!', // 英雄区文字
-  STARTER_HERO_TITLE_2: 'Learn Chinese with Jade', // 英雄区文字
+  STARTER_HERO_TITLE_2: 'Learn Chinese with Jade  
+  Free beginner Chinese learning resources  
+  Structured learning: HSK & HSKK exam preparation 
+  Business Chinese & Chinese business etiquette  
+  Customized one-on-one online lessons  
+  Comprehensive improvement in speaking, writing, listening, and reading', // 英雄区文字
   // 英雄区两个按钮，如果TEXT留空则隐藏按钮
   STARTER_HERO_BUTTON_1_TEXT: 'Contact me', // 英雄区按钮
   STARTER_HERO_BUTTON_1_URL:
