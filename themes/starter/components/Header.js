@@ -17,14 +17,12 @@ import { MenuList } from './MenuList'
 export const Header = props => {
   const router = useRouter()
   const { isDarkMode } = useGlobal()
-  const [buttonTextColor, setColor] = useState(
-    router.route === '/' ? 'text-white' : ''
-  )
+  const [buttonTextColor, setColor] = useState('')
 
   const enableClerk = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
 
   useEffect(() => {
-    if (isDarkMode || router.route === '/') {
+    if (isDarkMode) {
       setColor('text-white')
     } else {
       setColor('')

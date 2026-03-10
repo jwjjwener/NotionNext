@@ -6,7 +6,9 @@
 
 - **线上地址**: https://jadechineseclub.vercel.app/
 - **主题**: `starter`（落地页风格）
-- **品牌色**: 粉色（通过 Notion CONFIG 将默认蓝色 `primary` 覆盖为粉色）
+- **品牌色**: 翡翠绿 `#0f766e`（Tailwind primary，全局生效）
+- **无需本地构建**: 推送代码后 Vercel 自动构建部署，不需要本地 `yarn build`
+- **Git 提交规范**: 使用中文 commit message
 - **Git 远程**: https://github.com/jwjjwener/NotionNext.git
 - **部署方式**: 推送到 `main` 分支后 Vercel 自动部署
 
@@ -27,6 +29,80 @@ NotionNext/
 ├── public/                     # 静态资源
 │   └── images/starter/         # starter 主题图片资源
 └── next.config.js              # Next.js 构建配置
+```
+
+## 首页渲染链路（DIY 必读）
+
+### 完整渲染流程
+
+```
+用户访问 /
+  → pages/index.js（SSG 数据获取 + 选择主题）
+    → pages/_app.js（全局包裹层）
+      → GlobalContextProvider（全局状态：暗色模式、语言等）
+        → LayoutBase（themes/starter/index.js）
+          ├── Style（style.js — 主题专属 CSS 注入）
+          ├── Header（导航栏 — absolute 定位，叠在内容上方）
+          ├── LayoutIndex（首页内容 — 见下方区块顺序）
+          └── Footer（页脚）
+      → ExternalPlugins（全局插件 — 统计、动画、GlobalStyle 等）
+        └── GlobalStyle（注入 Notion GLOBAL_CSS — ⚠️ 可覆盖任何样式）
+```
+
+### 首页区块渲染顺序（LayoutIndex）
+
+在 `themes/starter/index.js` 的 `LayoutIndex` 中按以下顺序渲染，每个区块都有 `ENABLE` 开关：
+
+| 序号 | 区块 | 组件文件 | 开关配置 |
+|------|------|----------|----------|
+| 1 | 英雄区 | `components/Hero.js` | `STARTER_HERO_ENABLE` |
+| 2 | 合作伙伴 | `components/Brand.js` | `STARTER_BRANDS_ENABLE` |
+| 3 | 服务特性 | `components/Features.js` | `STARTER_FEATURE_ENABLE` |
+| 4 | 关于我们 | `components/About.js` | `STARTER_ABOUT_ENABLE` |
+| 5 | 价格表 | `components/Pricing.js` | `STARTER_PRICING_ENABLE` |
+| 6 | 学员评价 | `components/Testimonials.js` | `STARTER_TESTIMONIALS_ENABLE` |
+| 7 | 常见问题 | `components/FAQ.js` | `STARTER_FAQ_ENABLE` |
+| 8 | 团队介绍 | `components/Team.js` | `STARTER_TEAM_ENABLE` |
+| 9 | 博客列表 | `components/Blog.js` | `STARTER_BLOG_ENABLE` |
+| 10 | 联系方式 | `components/Contact.js` | `STARTER_CONTACT_ENABLE` |
+| 11 | 行动呼吁 | `components/CTA.js` | `STARTER_CTA_ENABLE` |
+
+**DIY 操作**：
+
+- **调整顺序**：在 `LayoutIndex` 中移动 JSX 组件的位置
+- **关闭区块**：在 `config.js` 中设置 `STARTER_XXX_ENABLE: false`
+- **插入新区块**：在 `components/` 下创建新组件，然后在 `LayoutIndex` 中引入
+
+### 始终渲染的全局组件（LayoutBase）
+
+| 组件 | 文件 | 说明 |
+|------|------|------|
+| Style | `style.js` | 主题专属 CSS（sticky 导航、轮播等） |
+| Header | `components/Header.js` | 导航栏（Logo + 菜单 + 暗色切换） |
+| Footer | `components/Footer.js` | 页脚 |
+| BackToTopButton | `components/BackToTopButton.js` | 回到顶部按钮 |
+
+### 样式优先级（从低到高）
+
+```
+1. tailwind.config.js        ← Tailwind 编译时确定（primary 等颜色）
+2. styles/globals.css         ← 全局基础样式
+3. styles/notion.css          ← Notion 内容渲染样式
+4. themes/starter/style.js    ← 主题专属 CSS（styled-jsx global）
+5. 组件内 Tailwind 类         ← 各组件的 className
+6. public/css/custom.css      ← 静态自定义样式（运行时加载）
+7. Notion GLOBAL_CSS          ← ⚠️ 通过 GlobalStyle.js 注入，可用 !important 覆盖一切
+```
+
+**⚠️ 重要警告**：Notion 数据库中的 `GLOBAL_CSS` Config 会通过 `components/GlobalStyle.js` 注入为 `<style jsx global>`，优先级最高。如果使用了 `!important`，会覆盖 Tailwind 和所有组件样式（包括 `dark:` 变体）。修改颜色时优先改 `tailwind.config.js`，避免在 GLOBAL_CSS 中使用 `!important`。
+
+### 配置优先级（从低到高）
+
+```
+1. blog.config.js             ← 全局默认值
+2. themes/starter/config.js   ← 主题默认值（STARTER_XXX）
+3. Notion CONFIG              ← 数据库中 type=Config 的记录覆盖同名配置
+4. Vercel 环境变量            ← NEXT_PUBLIC_THEME 等
 ```
 
 ## Notion 数据库结构
@@ -177,7 +253,45 @@ Notion CONFIG > themes/starter/config.js 默认值
 3. 确认 `slug` 与 `config.js` 中的键名完全一致
 4. 等待 ISR 缓存刷新（默认 60 秒）或重新部署
 
+## 颜色体系
+
+| 用途 | 变量/类名 | 色值 |
+|------|-----------|------|
+| 主色（按钮、链接、图标） | `primary` | `#0f766e`（翡翠绿 teal-700） |
+| 主色悬停 | `blue-dark` | `#0d6560`（深翡翠绿） |
+| 辅助色 | `secondary` | `#13C296`（绿色） |
+| 区块背景（亮色） | `bg-white` / `bg-gray-1` | 白色 / 浅灰 |
+| 区块背景（暗色） | `dark:bg-black` | `#000`（纯黑） |
+| 卡片背景（暗色） | `dark:bg-[#111]` | `#111`（微亮黑） |
+
+**设计原则**: 白底为主，翡翠绿仅用于强调元素（按钮、链接、图标），避免大面积彩色背景。
+
 ## 已完成的样式定制
+
+### 品牌色重塑：翡翠绿 + 白底专业风格（commit: 1798727e）
+
+**全局颜色**（`tailwind.config.js`）：
+- `primary`: `#3758F9` → `#0f766e`（翡翠绿）
+- `blue-dark`: `#1B44C8` → `#0d6560`（深翡翠绿）
+
+**Hero 英雄区**（`Hero.js`）：
+- 背景：`bg-primary` → `bg-white`（白底）
+- 文字：`text-white` → `text-dark dark:text-white`
+- 按钮：`bg-white text-dark` → `bg-primary text-white`（翡翠绿按钮）
+
+**Features 服务区**（`Features.js`）：
+- 背景：`bg-primary` → `bg-gray-1`（浅灰底）
+- 添加白色卡片容器：`rounded-xl bg-white dark:bg-[#111] p-8 shadow hover:shadow-lg`
+- 图标：`bg-white bg-opacity-20` → `bg-primary bg-opacity-20 text-primary`
+
+**Contact 联系区**（`Contact.js`）：
+- 上半部分背景：`bg-[#FFF0F3]`（粉色）→ `bg-gray-1`（中性灰）
+
+**导航栏样式**（`style.js`）：
+- 所有 `rgb(55 88 249)` → `rgb(15 118 110)`（翡翠绿）
+
+**SVG 图标**（`SVGGifts/Template/Design/Essential.js`）：
+- `fill="white"` → `fill="currentColor"`（继承父元素颜色）
 
 ### 暗色模式统一（commit: 880e1277）
 
@@ -186,10 +300,6 @@ Notion CONFIG > themes/starter/config.js 默认值
 - **卡片/浮层**: `dark:bg-[#111]`（微亮黑，提供层次感）
 
 涉及文件：About, Pricing, FAQ, Team, Testimonials, Blog, Contact, CTA, Footer, Banner, Brand, MenuList, MenuItem, SignInForm, SignUpForm, index.js, style.js
-
-### 亮色模式品牌色
-
-- Contact 区块上半部分背景：`bg-[#FFF0F3]`（粉色调，匹配品牌色）
 
 ### 其他样式修改
 
@@ -278,8 +388,10 @@ pages/
 3. 在 `conf/layout-map.config.js` 中配置路由映射
 
 ### 修改全局样式/颜色
+
+- Tailwind 主色：编辑 `tailwind.config.js` 中的 `primary` 和 `blue-dark`
 - Tailwind 类：直接在组件中修改
-- 主题专属 CSS：编辑 `themes/starter/style.js`
+- 主题专属 CSS：编辑 `themes/starter/style.js`（注意同步硬编码的 RGB 值）
 - 全局 CSS：编辑 `styles/globals.css`
 
 ## 开发命令
@@ -292,12 +404,24 @@ yarn start        # 启动生产服务
 
 ## 部署流程
 
+**无需本地构建**，推送后 Vercel 自动构建部署：
+
 ```bash
 git add <files>
-git commit -m "feat: 描述"
+git commit -m "feat: 添加xxx功能"
 git push origin main
 # Vercel 自动部署，约 1-2 分钟生效
 ```
+
+**Commit 规范**：使用中文描述，格式 `<type>: <中文描述>`
+
+| type | 用途 |
+|------|------|
+| `feat` | 新功能 |
+| `fix` | 修复 bug |
+| `refactor` | 重构 |
+| `docs` | 文档 |
+| `chore` | 杂项 |
 
 ## 注意事项
 

@@ -20,18 +20,15 @@ export const Logo = props => {
   const logoWhite = CONFIG.STARTER_LOGO_WHITE || CONFIG.STARTER_LOGO || '/images/starter/logo/logo.png'
   const logoNormal = CONFIG.STARTER_LOGO || '/images/starter/logo/logo.png'
   const { isDarkMode } = useGlobal()
-  const [logo, setLogo] = useState(logoWhite)
-  const [logoTextColor, setLogoTextColor] = useState('text-white')
+  const [logo, setLogo] = useState(logoNormal)
+  const [logoTextColor, setLogoTextColor] = useState('text-black')
 
   useEffect(() => {
     // 滚动监听
     const throttleMs = 200
     const navBarScrollListener = throttle(() => {
-      const scrollY = window.scrollY
       // 何时显示浅色或白底的logo
-      const homePageNavBar = router.route === '/' && scrollY < 10 // 在首页并且视窗在页面顶部
-
-      if (white || isDarkMode || homePageNavBar) {
+      if (white || isDarkMode) {
         setLogo(logoWhite)
         setLogoTextColor('text-white')
       } else {
