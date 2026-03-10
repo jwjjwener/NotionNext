@@ -18,7 +18,7 @@ const CONFIG = {
     'https://wa.me/40748083168', // 英雄区按钮
   STARTER_HERO_BUTTON_2_TEXT: '', // 英雄区按钮
   STARTER_HERO_BUTTON_2_URL: '', // 英雄区按钮
-  STARTER_HERO_BUTTON_1_ICON: '/themes/starter/components/svg/whatsapp-svgrepo-com (1).svg', // 英雄区按钮1的图标，不需要则留空
+  STARTER_HERO_BUTTON_1_ICON: '/themes/starter/components/svg/whatsapp.svg', // 英雄区按钮1的图标，不需要则留空
 
   // 英雄区配图，如需隐藏，改为空值即可 ''
   STARTER_HERO_PREVIEW_IMAGE: '/images/starter/hero/hero-image.webp', // 产品预览图 ，默认读取public目录下图片
