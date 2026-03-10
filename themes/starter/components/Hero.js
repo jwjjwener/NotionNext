@@ -9,6 +9,7 @@ import SmartLink from '@/components/SmartLink'
  */
 export const Hero = props => {
   const config = props?.NOTION_CONFIG || CONFIG
+  const heroButton1Icon = siteConfig('STARTER_HERO_BUTTON_1_ICON', null, config)
   return (
     <>
       {/* <!-- ====== Hero Section Start --> */}
@@ -36,36 +37,14 @@ export const Hero = props => {
                       <SmartLink
                         href={siteConfig('STARTER_HERO_BUTTON_1_URL', '')}
                         className='inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 hover:text-body-color'>
-                        {siteConfig('STARTER_HERO_BUTTON_1_TEXT', null, config)}
-                      </SmartLink>
-                    </li>
-                  )}
-                  {siteConfig('STARTER_HERO_BUTTON_2_TEXT', null, config) && (
-                    <li>
-                      <SmartLink
-                        href={siteConfig(
-                          'STARTER_HERO_BUTTON_2_URL',
-                          null,
-                          config
-                        )}
-                        target='_blank'
-                        className='flex items-center rounded-md bg-white/[0.12] px-6 py-[14px] text-base font-medium text-white transition duration-300 ease-in-out hover:bg-white hover:text-dark'
-                        rel='noreferrer'>
-                        {siteConfig(
-                          'STARTER_HERO_BUTTON_2_ICON',
-                          null,
-                          config
-                        ) && (
+                        {heroButton1Icon && (
                           <img
-                            className='mr-4'
-                            src={siteConfig(
-                              'STARTER_HERO_BUTTON_2_ICON',
-                              null,
-                              config
-                            )}
+                            className='mr-3 h-5 w-5'
+                            src={heroButton1Icon}
+                            alt='button icon'
                           />
                         )}
-                        {siteConfig('STARTER_HERO_BUTTON_2_TEXT', null, config)}
+                        {siteConfig('STARTER_HERO_BUTTON_1_TEXT', null, config)}
                       </SmartLink>
                     </li>
                   )}
