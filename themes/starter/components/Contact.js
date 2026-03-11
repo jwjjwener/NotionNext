@@ -1,4 +1,5 @@
 import { siteConfig } from '@/lib/config'
+import { useStarterI18n } from '../hooks/useStarterI18n'
 import CONFIG from '../config'
 import { SVGEmail } from './svg/SVGEmail'
 import { SVGLocation } from './svg/SVGLocation'
@@ -19,10 +20,10 @@ export const Contact = () => {
               <div className='ud-contact-content-wrapper'>
                 <div className='ud-contact-title mb-12 lg:mb-[150px]'>
                   <span className='mb-6 block text-base font-medium text-dark dark:text-white'>
-                    {siteConfig('STARTER_CONTACT_TITLE')}
+                    {useStarterI18n('STARTER_CONTACT_TITLE')}
                   </span>
                   <h2 className='max-w-[260px] text-[35px] font-semibold leading-[1.14] text-dark dark:text-white'>
-                    {siteConfig('STARTER_CONTACT_TEXT')}
+                    {useStarterI18n('STARTER_CONTACT_TEXT')}
                   </h2>
                 </div>
                 <div className='mb-12 flex flex-wrap justify-between lg:mb-0'>

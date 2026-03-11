@@ -8,6 +8,7 @@ import SmartLink from '@/components/SmartLink'
 import { useRouter } from 'next/router'
 import { useCallback, useEffect, useState } from 'react'
 import { DarkModeButton } from './DarkModeButton'
+import { LangSwitchButton } from './LangSwitchButton'
 import { Logo } from './Logo'
 import { MenuList } from './MenuList'
 
@@ -65,6 +66,8 @@ export const Header = props => {
 
               {/* 右侧功能 */}
               <div className='flex items-center gap-4 justify-end pr-16 lg:pr-0'>
+                {/* 语言切换 */}
+                <LangSwitchButton />
                 {/* 深色模式切换 */}
                 <DarkModeButton />
               </div>

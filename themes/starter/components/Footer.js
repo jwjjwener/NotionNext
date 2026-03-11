@@ -1,4 +1,6 @@
 import { siteConfig } from '@/lib/config'
+import { useStarterI18n } from '../hooks/useStarterI18n'
+import { useGlobal } from '@/lib/global'
 import SocialButton from '@/themes/fukasawa/components/SocialButton'
 import { Logo } from './Logo'
 import { SVGFooterCircleBG } from './svg/SVGFooterCircleBG'
@@ -11,6 +13,8 @@ export const Footer = props => {
     ? props?.latestPosts.slice(0, footerPostCount)
     : []
   const STARTER_FOOTER_LINK_GROUP = siteConfig('STARTER_FOOTER_LINK_GROUP', [])
+  const { lang } = useGlobal()
+  const isEn = lang?.startsWith('en')
   return (
     <>
       {/* <!-- ====== Footer Section Start --> */}
@@ -25,7 +29,7 @@ export const Footer = props => {
                   <Logo white={true} />
                 </a>
                 <p className='mb-8 max-w-[270px] text-base text-gray-7'>
-                  {siteConfig('STARTER_FOOTER_SLOGAN')}
+                  {useStarterI18n('STARTER_FOOTER_SLOGAN')}
                 </p>
                 <div className='-mx-3 flex items-center'>
                   <div className='mx-3'>
@@ -43,7 +47,7 @@ export const Footer = props => {
                   className='w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12'>
                   <div className='mb-10 w-full'>
                     <h4 className='mb-9 text-lg font-semibold text-white'>
-                      {item.TITLE}
+                      {isEn && item.TITLE_EN ? item.TITLE_EN : item.TITLE}
                     </h4>
                     <ul>
                       {item?.LINK_GROUP?.map((l, i) => {
@@ -52,7 +56,7 @@ export const Footer = props => {
                             <SmartLink
                               href={l.URL}
                               className='mb-3 inline-block text-base text-gray-7 hover:text-primary'>
-                              {l.TITLE}
+                              {isEn && l.TITLE_EN ? l.TITLE_EN : l.TITLE}
                             </SmartLink>
                           </li>
                         )
@@ -67,7 +71,7 @@ export const Footer = props => {
             <div className='w-full px-4 md:w-2/3 lg:w-6/12 xl:w-3/12'>
               <div className='mb-10 w-full'>
                 <h4 className='mb-9 text-lg font-semibold text-white'>
-                  {siteConfig('STARTER_FOOTER_BLOG_LATEST_TITLE')}
+                  {useStarterI18n('STARTER_FOOTER_BLOG_LATEST_TITLE')}
                 </h4>
                 {/* 展示两条最新博客文章 */}
                 <div className='flex flex-col gap-8'>
@@ -108,21 +112,21 @@ export const Footer = props => {
                     <SmartLink
                       href={siteConfig('STARTER_FOOTER_PRIVACY_POLICY_URL', '')}
                       className='px-3 text-base text-gray-7 hover:text-white hover:underline'>
-                      {siteConfig('STARTER_FOOTER_PRIVACY_POLICY_TEXT')}
+                      {useStarterI18n('STARTER_FOOTER_PRIVACY_POLICY_TEXT')}
                     </SmartLink>
                     <SmartLink
                       href={siteConfig(
                         'STARTER_FOOTER_PRIVACY_LEGAL_NOTICE_URL', ''
                       )}
                       className='px-3 text-base text-gray-7 hover:text-white hover:underline'>
-                      {siteConfig('STARTER_FOOTER_PRIVACY_LEGAL_NOTICE_TEXT')}
+                      {useStarterI18n('STARTER_FOOTER_PRIVACY_LEGAL_NOTICE_TEXT')}
                     </SmartLink>
                     <SmartLink
                       href={siteConfig(
                         'STARTER_FOOTER_PRIVACY_TERMS_OF_SERVICE_URL', ''
                       )}
                       className='px-3 text-base text-gray-7 hover:text-white hover:underline'>
-                      {siteConfig(
+                      {useStarterI18n(
                         'STARTER_FOOTER_PRIVACY_TERMS_OF_SERVICE_TEXT', ''
                       )}
                     </SmartLink>

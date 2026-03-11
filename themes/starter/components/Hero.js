@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import LazyImage from '@/components/LazyImage'
 import { siteConfig } from '@/lib/config'
+import { useStarterI18n } from '../hooks/useStarterI18n'
 import CONFIG from '../config'
 import SmartLink from '@/components/SmartLink'
 
@@ -24,15 +25,15 @@ export const Hero = props => {
                 data-wow-delay='.2s'>
                 {/* 主标题 */}
                 <h1 className='mb-6 text-3xl font-bold leading-snug text-dark dark:text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]'>
-                  {siteConfig('STARTER_HERO_TITLE_1', null, config)}
+                  {useStarterI18n('STARTER_HERO_TITLE_1', null, config)}
                 </h1>
                 {/* 次标题 */}
                 <p className='mx-auto mb-9 max-w-[600px] text-base font-medium text-body-color dark:text-dark-6 sm:text-lg sm:leading-[1.44]'>
-                  {siteConfig('STARTER_HERO_TITLE_2', null, config)}
+                  {useStarterI18n('STARTER_HERO_TITLE_2', null, config)}
                 </p>
                 {/* 按钮组 */}
                 <ul className='mb-10 flex flex-wrap items-center justify-center gap-5'>
-                  {siteConfig('STARTER_HERO_BUTTON_1_TEXT', null, config) && (
+                  {useStarterI18n('STARTER_HERO_BUTTON_1_TEXT', null, config) && (
                     <li>
                       <SmartLink
                         href={siteConfig('STARTER_HERO_BUTTON_1_URL', '')}
@@ -44,7 +45,7 @@ export const Hero = props => {
                             alt='button icon'
                           />
                         )}
-                        {siteConfig('STARTER_HERO_BUTTON_1_TEXT', null, config)}
+                        {useStarterI18n('STARTER_HERO_BUTTON_1_TEXT', null, config)}
                       </SmartLink>
                     </li>
                   )}

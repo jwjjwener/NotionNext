@@ -1,9 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import { siteConfig } from '@/lib/config'
+import { useStarterI18n } from '../hooks/useStarterI18n'
+import { useGlobal } from '@/lib/global'
 import { SVGAvatarBG } from './svg/SVGAvatarBG'
 
 export const Team = () => {
   const STARTER_TEAM_ITEMS = siteConfig('STARTER_TEAM_ITEMS', [])
+  const { lang } = useGlobal()
+  const isEn = lang?.startsWith('en')
   return (
     <>
       {/* <!-- ====== Team Section Start --> */}
@@ -15,14 +19,14 @@ export const Team = () => {
             <div className='w-full px-4'>
               <div className='mx-auto mb-[60px] max-w-[485px] text-center'>
                 <span className='mb-2 block text-lg font-semibold text-primary'>
-                  {siteConfig('STARTER_TEAM_TITLE')}
+                  {useStarterI18n('STARTER_TEAM_TITLE')}
                 </span>
                 <h2 className='mb-3 text-3xl font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]'>
-                  {siteConfig('STARTER_TEAM_TEXT_1')}
+                  {useStarterI18n('STARTER_TEAM_TEXT_1')}
                 </h2>
                 <p
                   dangerouslySetInnerHTML={{
-                    __html: siteConfig('STARTER_TEAM_TEXT_2')
+                    __html: useStarterI18n('STARTER_TEAM_TEXT_2')
                   }}
                   className='text-base text-body-color dark:text-dark-6'></p>
               </div>
@@ -57,7 +61,7 @@ export const Team = () => {
                       </h4>
 
                       <p className='mb-5 text-sm text-body-color dark:text-dark-6'>
-                        {item.STARTER_TEAM_ITEM_DESCRIPTION}
+                        {isEn && item.STARTER_TEAM_ITEM_DESCRIPTION_EN ? item.STARTER_TEAM_ITEM_DESCRIPTION_EN : item.STARTER_TEAM_ITEM_DESCRIPTION}
                       </p>
 
                       {/* 社交链接 */}

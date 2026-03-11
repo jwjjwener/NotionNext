@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
 import { siteConfig } from '@/lib/config'
+import { useStarterI18n } from '../hooks/useStarterI18n'
 import SmartLink from '@/components/SmartLink'
 
 /**
@@ -20,18 +21,18 @@ export const About = () => {
               <div className='w-full px-4 lg:w-1/2'>
                 <div className='mb-12 max-w-[540px] lg:mb-0'>
                   <h2 className='mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]'>
-                    {siteConfig('STARTER_ABOUT_TITLE')}
+                    {useStarterI18n('STARTER_ABOUT_TITLE')}
                   </h2>
                   <p
                     className='mb-10 text-base leading-relaxed text-body-color dark:text-dark-6'
                     dangerouslySetInnerHTML={{
-                      __html: siteConfig('STARTER_ABOUT_TEXT')
+                      __html: useStarterI18n('STARTER_ABOUT_TEXT')
                     }}></p>
 
                   <SmartLink
                     href={siteConfig('STARTER_ABOUT_BUTTON_URL', '')}
                     className='inline-flex items-center justify-center rounded-md border border-primary bg-primary px-7 py-3 text-center text-base font-medium text-white hover:border-blue-dark hover:bg-blue-dark'>
-                    {siteConfig('STARTER_ABOUT_BUTTON_TEXT')}
+                    {useStarterI18n('STARTER_ABOUT_BUTTON_TEXT')}
                   </SmartLink>
                 </div>
               </div>
@@ -64,10 +65,10 @@ export const About = () => {
                           {siteConfig('STARTER_ABOUT_TIPS_1')}
                         </span>
                         <span className='block text-base font-semibold text-white'>
-                          {siteConfig('STARTER_ABOUT_TIPS_2')}
+                          {useStarterI18n('STARTER_ABOUT_TIPS_2')}
                         </span>
                         <span className='block text-base font-medium text-white text-opacity-70'>
-                          {siteConfig('STARTER_ABOUT_TIPS_3')}
+                          {useStarterI18n('STARTER_ABOUT_TIPS_3')}
                         </span>
                       </div>
                       <div>

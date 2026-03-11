@@ -2,6 +2,8 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { siteConfig } from '@/lib/config'
+import { useStarterI18n } from '../hooks/useStarterI18n'
+import { useGlobal } from '@/lib/global'
 import { loadExternalResource } from '@/lib/utils'
 import { useEffect } from 'react'
 import { SVGLeftArrow } from './svg/SVGLeftArrow'
@@ -59,6 +61,8 @@ export const Testimonials = () => {
   }, [])
   // 用户评分
   const ratings = [1, 2, 3, 4, 5]
+  const { lang } = useGlobal()
+  const isEn = lang?.startsWith('en')
   const STARTER_TESTIMONIALS_ITEMS = siteConfig('STARTER_TESTIMONIALS_ITEMS')
   return (
     <>
@@ -71,13 +75,13 @@ export const Testimonials = () => {
             <div className='w-full px-4'>
               <div className='mx-auto mb-[60px] max-w-[485px] text-center'>
                 <span className='mb-2 block text-lg font-semibold text-primary'>
-                  {siteConfig('STARTER_TESTIMONIALS_TITLE')}
+                  {useStarterI18n('STARTER_TESTIMONIALS_TITLE')}
                 </span>
                 <h2 className='mb-3 text-3xl font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]'>
-                  {siteConfig('STARTER_TESTIMONIALS_TEXT_1')}
+                  {useStarterI18n('STARTER_TESTIMONIALS_TEXT_1')}
                 </h2>
                 <p className='text-base text-body-color dark:text-dark-6'>
-                  {siteConfig('STARTER_TESTIMONIALS_TEXT_2')}
+                  {useStarterI18n('STARTER_TESTIMONIALS_TEXT_2')}
                 </p>
               </div>
             </div>
@@ -102,7 +106,7 @@ export const Testimonials = () => {
                         </div>
 
                         <p className='mb-6 text-base text-body-color dark:text-dark-6'>
-                          “{item.STARTER_TESTIMONIALS_ITEM_TEXT}”
+                          {isEn && item.STARTER_TESTIMONIALS_ITEM_TEXT_EN ? item.STARTER_TESTIMONIALS_ITEM_TEXT_EN : item.STARTER_TESTIMONIALS_ITEM_TEXT}
                         </p>
 
                         <a
@@ -121,7 +125,7 @@ export const Testimonials = () => {
                               {item.STARTER_TESTIMONIALS_ITEM_NICKNAME}
                             </h3>
                             <p className='text-xs text-body-secondary'>
-                              {item.STARTER_TESTIMONIALS_ITEM_DESCRIPTION}
+                              {isEn && item.STARTER_TESTIMONIALS_ITEM_DESCRIPTION_EN ? item.STARTER_TESTIMONIALS_ITEM_DESCRIPTION_EN : item.STARTER_TESTIMONIALS_ITEM_DESCRIPTION}
                             </p>
                           </div>
                         </a>
