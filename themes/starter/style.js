@@ -209,6 +209,26 @@ const Style = () => {
   from { width: 0%; }
   to { width: 100%; }
 }
+
+/* 轻量 fadeInUp 动画 — 替代 wow.js + animate.css */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.wow {
+  opacity: 0;
+}
+
+.wow.animated {
+  animation: fadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
   `}</style>
 }
 

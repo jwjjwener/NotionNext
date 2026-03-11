@@ -30,7 +30,6 @@ import ShareBar from '@/components/ShareBar'
 import DashboardBody from '@/components/ui/dashboard/DashboardBody'
 import DashboardHeader from '@/components/ui/dashboard/DashboardHeader'
 import { useGlobal } from '@/lib/global'
-import { loadWowJS } from '@/lib/plugins/wow'
 import { SignIn, SignUp } from '@clerk/nextjs'
 import SmartLink from '@/components/SmartLink'
 import { ArticleLock } from './components/ArticleLock'
@@ -55,9 +54,24 @@ const LayoutBase = props => {
     const { isLiteMode } = useGlobal()
     const router = useRouter()
 
-    // 加载wow动画
+    // 轻量滚动动画 — 替代 wow.js + animate.css（省掉两个外部请求）
     useEffect(() => {
-        loadWowJS()
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target
+                        const delay = el.dataset.wowDelay || '0s'
+                        el.style.animationDelay = delay
+                        el.classList.add('animated')
+                        observer.unobserve(el)
+                    }
+                })
+            },
+            { threshold: 0.15 }
+        )
+        document.querySelectorAll('.wow').forEach((el) => observer.observe(el))
+        return () => observer.disconnect()
     }, [])
 
     // 特殊简化布局，如果识别到路由中有 ?lite=true，则给网页添加一些自定义的css样式，例如背景改成黑色

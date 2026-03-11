@@ -83,6 +83,7 @@ export const HeroCarousel = ({ images = [], interval = 5000 }) => {
               src={src}
               alt=''
               className='h-full w-full object-cover'
+              {...(index === 0 ? { fetchpriority: 'high' } : { loading: 'lazy' })}
             />
           </div>
         )
