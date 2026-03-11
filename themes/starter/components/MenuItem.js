@@ -24,7 +24,7 @@ export const MenuItem = ({ link }) => {
           <SmartLink
             href={link?.href}
             target={link?.target}
-            className={`ud-menu-scroll mx-4 2xl:mx-6 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white xl:mr-0 xl:inline-flex xl:px-0 xl:py-6 xl:text-sm 2xl:text-base xl:group-hover:opacity-70`}>
+            className={`ud-menu-scroll mx-4 2xl:mx-6 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white xl:mr-0 xl:inline-flex xl:px-0 xl:py-6 xl:mx-2 xl:text-sm 2xl:mx-4 2xl:text-base xl:group-hover:opacity-70`}>
             {link?.icon && <i className={link.icon + ' mr-2 my-auto'} />}
             {link?.name}
           </SmartLink>
@@ -36,7 +36,7 @@ export const MenuItem = ({ link }) => {
         <li className='submenu-item group relative whitespace-nowrap'>
           <button
             onClick={toggleSubMenu}
-            className={`cursor-pointer relative px-4 2xl:px-6 flex items-center justify-between py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white xl:ml-4 xl:mr-0 xl:inline-flex xl:py-6 xl:pl-0 xl:pr-4 xl:text-sm 2xl:text-base xl:group-hover:opacity-70 2xl:ml-6`}>
+            className={`cursor-pointer relative px-4 2xl:px-6 flex items-center justify-between py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white xl:ml-2 xl:mr-0 xl:inline-flex xl:py-6 xl:pl-0 xl:pr-4 xl:text-sm 2xl:text-base xl:group-hover:opacity-70 2xl:ml-4`}>
             <span>
               {link?.icon && <i className={link.icon + ' mr-2 my-auto'} />}
               {link?.name}
