@@ -82,7 +82,7 @@ export const MenuList = props => {
         className={`absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-[#111] lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6 ${
           showMenu ? '' : 'hidden'
         }`}>
-        <ul className='blcok lg:flex lg:flex-wrap'>
+        <ul className='blcok lg:flex lg:items-center'>
           {links?.map((link, index) => (
             <MenuItem key={index} link={link} />
           ))}
