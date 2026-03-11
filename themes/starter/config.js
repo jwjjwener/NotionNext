@@ -11,7 +11,7 @@ const CONFIG = {
   // 英雄区块导航
   STARTER_HERO_ENABLE: true, // 开启英雄区
   STARTER_HERO_TITLE_1: 'Welcome to Jade Chinese Club!', // 英雄区文字
-  STARTER_HERO_TITLE_2: 'What we offer?', // 英雄区文字
+  STARTER_HERO_TITLE_2: '', // 英雄区文字
   // 英雄区两个按钮，如果TEXT留空则隐藏按钮
   STARTER_HERO_BUTTON_1_TEXT: 'Contact me', // 英雄区按钮
   STARTER_HERO_BUTTON_1_URL:
@@ -41,7 +41,7 @@ const CONFIG = {
 
   // 特性区块 - 服务导航按钮
   STARTER_FEATURE_ENABLE: true, // 特性区块开关
-  STARTER_FEATURE_TITLE: 'What we offer?', // 特性
+  STARTER_FEATURE_TITLE: '', // 特性
   STARTER_FEATURE_TEXT_1: '我们的服务', // 特性
   STARTER_FEATURE_TEXT_1_EN: 'Our Services',
   STARTER_FEATURE_TEXT_2:
