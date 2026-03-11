@@ -214,7 +214,7 @@ const Style = () => {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -222,12 +222,8 @@ const Style = () => {
   }
 }
 
-.wow {
-  opacity: 0;
-}
-
 .wow.animated {
-  animation: fadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: fadeInUp 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
   `}</style>
 }
