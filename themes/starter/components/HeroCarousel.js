@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 /**
  * Hero 轮播图组件
@@ -9,20 +9,26 @@ import { useState, useEffect, useCallback } from 'react'
 export const HeroCarousel = ({ images = [], interval = 5000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
-  // 用于重置进度条动画的 key
   const [progressKey, setProgressKey] = useState(0)
+  const timerRef = useRef(null)
 
-  const goToNext = useCallback(() => {
-    setCurrentIndex(prev => (prev + 1) % images.length)
-    setProgressKey(prev => prev + 1)
-  }, [images.length])
+  // 自动切换 — 用 ref 保存 currentIndex 避免 useEffect 依赖变化导致 interval 重建
+  const currentIndexRef = useRef(currentIndex)
+  currentIndexRef.current = currentIndex
 
-  // 自动切换
   useEffect(() => {
     if (isPaused || images.length <= 1) return
-    const timer = setInterval(goToNext, interval)
-    return () => clearInterval(timer)
-  }, [isPaused, images.length, interval, goToNext])
+
+    timerRef.current = setInterval(() => {
+      const next = (currentIndexRef.current + 1) % images.length
+      setCurrentIndex(next)
+      setProgressKey(prev => prev + 1)
+    }, interval)
+
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current)
+    }
+  }, [isPaused, images.length, interval])
 
   if (!images.length) return null
 
@@ -41,8 +47,9 @@ export const HeroCarousel = ({ images = [], interval = 5000 }) => {
             className='absolute inset-0'
             style={{
               opacity: isActive ? 1 : 0,
-              transform: isActive ? 'scale(1.08)' : 'scale(1)',
-              transition: 'opacity 1.2s ease-in-out, transform 5s ease-out',
+              transform: isActive ? 'scale(1.06)' : 'scale(1)',
+              transition: 'opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1), transform 6s cubic-bezier(0.25, 0.1, 0.25, 1)',
+              willChange: 'opacity, transform',
               zIndex: isActive ? 1 : 0
             }}>
             <img
@@ -64,6 +71,15 @@ export const HeroCarousel = ({ images = [], interval = 5000 }) => {
               onClick={() => {
                 setCurrentIndex(index)
                 setProgressKey(prev => prev + 1)
+                // 重置自动切换计时器
+                if (timerRef.current) {
+                  clearInterval(timerRef.current)
+                  timerRef.current = setInterval(() => {
+                    const next = (currentIndexRef.current + 1) % images.length
+                    setCurrentIndex(next)
+                    setProgressKey(prev => prev + 1)
+                  }, interval)
+                }
               }}
               className='group relative h-1 w-10 overflow-hidden rounded-full bg-white/30 transition-all hover:bg-white/50'
               aria-label={`Slide ${index + 1}`}>

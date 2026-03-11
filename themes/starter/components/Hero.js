@@ -14,15 +14,15 @@ export const Hero = props => {
   const config = props?.NOTION_CONFIG || CONFIG
   const heroButton1Icon = siteConfig('STARTER_HERO_BUTTON_1_ICON', null, config)
 
-  // 轮播图片：优先读取数组配置，回退到单张图片
-  const carouselImages = siteConfig('STARTER_HERO_CAROUSEL_IMAGES', [], config)
+  // 轮播图片：数组配置直接从 CONFIG 读取（siteConfig 不能可靠处理数组）
+  const carouselImages = CONFIG.STARTER_HERO_CAROUSEL_IMAGES || []
   const previewImage = siteConfig('STARTER_HERO_PREVIEW_IMAGE', null, config)
   const images = carouselImages.length > 0
     ? carouselImages
     : previewImage
       ? [previewImage]
       : []
-  const carouselInterval = siteConfig('STARTER_HERO_CAROUSEL_INTERVAL', 5000, config)
+  const carouselInterval = CONFIG.STARTER_HERO_CAROUSEL_INTERVAL || 5000
 
   return (
     <>
