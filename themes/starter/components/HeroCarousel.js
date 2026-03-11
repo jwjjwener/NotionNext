@@ -12,6 +12,14 @@ export const HeroCarousel = ({ images = [], interval = 5000 }) => {
   const [progressKey, setProgressKey] = useState(0)
   const timerRef = useRef(null)
 
+  // 预加载所有图片，避免首次切换时卡顿
+  useEffect(() => {
+    images.forEach(src => {
+      const img = new window.Image()
+      img.src = src
+    })
+  }, [images])
+
   // 自动切换 — 用 ref 保存 currentIndex 避免 useEffect 依赖变化导致 interval 重建
   const currentIndexRef = useRef(currentIndex)
   currentIndexRef.current = currentIndex
@@ -56,7 +64,7 @@ export const HeroCarousel = ({ images = [], interval = 5000 }) => {
               src={src}
               alt=''
               className='h-full w-full object-cover'
-              loading={index === 0 ? 'eager' : 'lazy'}
+              
             />
           </div>
         )
