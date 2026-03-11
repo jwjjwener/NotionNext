@@ -1,16 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 
 /**
  * Hero 轮播图组件
  * 淡入淡出 + Ken Burns 微缩放效果
  * 纯 CSS + React 实现，零第三方依赖
+ *
+ * 使用 setTimeout + visibilitychange 确保：
+ * - 切换标签页后回来能立即恢复轮播
+ * - 窗口操作（最大化、移动等）不会中断轮播
  */
 export const HeroCarousel = ({ images = [], interval = 5000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [isPaused, setIsPaused] = useState(false)
   const [progressKey, setProgressKey] = useState(0)
   const timerRef = useRef(null)
+  const currentIndexRef = useRef(0)
 
   // 预加载所有图片，避免首次切换时卡顿
   useEffect(() => {
@@ -20,32 +24,47 @@ export const HeroCarousel = ({ images = [], interval = 5000 }) => {
     })
   }, [images])
 
-  // 自动切换 — 用 ref 保存 currentIndex 避免 useEffect 依赖变化导致 interval 重建
-  const currentIndexRef = useRef(currentIndex)
-  currentIndexRef.current = currentIndex
+  const advance = useCallback(() => {
+    const next = (currentIndexRef.current + 1) % images.length
+    currentIndexRef.current = next
+    setCurrentIndex(next)
+    setProgressKey(prev => prev + 1)
+  }, [images.length])
 
-  useEffect(() => {
-    if (isPaused || images.length <= 1) return
-
-    timerRef.current = setInterval(() => {
-      const next = (currentIndexRef.current + 1) % images.length
-      setCurrentIndex(next)
-      setProgressKey(prev => prev + 1)
+  const startTimer = useCallback(() => {
+    if (timerRef.current) clearTimeout(timerRef.current)
+    timerRef.current = setTimeout(function tick () {
+      advance()
+      timerRef.current = setTimeout(tick, interval)
     }, interval)
+  }, [advance, interval])
 
-    return () => {
-      if (timerRef.current) clearInterval(timerRef.current)
+  // 自动轮播 — 始终运行，不受鼠标悬停影响
+  useEffect(() => {
+    if (images.length <= 1) return
+    startTimer()
+    return () => { if (timerRef.current) clearTimeout(timerRef.current) }
+  }, [images.length, startTimer])
+
+  // 切换标签页回来时立即恢复轮播
+  useEffect(() => {
+    if (images.length <= 1) return
+    const onVisibility = () => {
+      if (document.visibilityState === 'visible') {
+        advance()
+        startTimer()
+      }
     }
-  }, [isPaused, images.length, interval])
+    document.addEventListener('visibilitychange', onVisibility)
+    return () => document.removeEventListener('visibilitychange', onVisibility)
+  }, [images.length, advance, startTimer])
 
   if (!images.length) return null
 
   return (
     <div
       className='relative w-full overflow-hidden rounded-2xl'
-      style={{ aspectRatio: '4/3' }}
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}>
+      style={{ aspectRatio: '4/3' }}>
       {/* 图片层 */}
       {images.map((src, index) => {
         const isActive = index === currentIndex
@@ -64,7 +83,6 @@ export const HeroCarousel = ({ images = [], interval = 5000 }) => {
               src={src}
               alt=''
               className='h-full w-full object-cover'
-              
             />
           </div>
         )
@@ -77,17 +95,10 @@ export const HeroCarousel = ({ images = [], interval = 5000 }) => {
             <button
               key={index}
               onClick={() => {
+                currentIndexRef.current = index
                 setCurrentIndex(index)
                 setProgressKey(prev => prev + 1)
-                // 重置自动切换计时器
-                if (timerRef.current) {
-                  clearInterval(timerRef.current)
-                  timerRef.current = setInterval(() => {
-                    const next = (currentIndexRef.current + 1) % images.length
-                    setCurrentIndex(next)
-                    setProgressKey(prev => prev + 1)
-                  }, interval)
-                }
+                startTimer()
               }}
               className='group relative h-1 w-10 overflow-hidden rounded-full bg-white/30 transition-all hover:bg-white/50'
               aria-label={`Slide ${index + 1}`}>
