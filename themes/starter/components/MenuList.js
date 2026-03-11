@@ -69,7 +69,7 @@ export const MenuList = props => {
       <button
         id='navbarToggler'
         onClick={toggleMenu}
-        className={`absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden ${
+        className={`absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 xl:hidden ${
           showMenu ? 'navbarTogglerActive' : ''
         }`}>
         <span className='relative my-[6px] block h-[2px] w-[30px] bg-dark dark:bg-white duration-200 transition-all'></span>
@@ -79,10 +79,10 @@ export const MenuList = props => {
 
       <nav
         id='navbarCollapse'
-        className={`absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-[#111] lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6 ${
+        className={`absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-[#111] xl:static xl:block xl:w-full xl:max-w-full xl:bg-transparent xl:px-4 xl:py-0 xl:shadow-none dark:xl:bg-transparent 2xl:px-6 ${
           showMenu ? '' : 'hidden'
         }`}>
-        <ul className='blcok lg:flex lg:items-center'>
+        <ul className='blcok xl:flex xl:items-center'>
           {links?.map((link, index) => (
             <MenuItem key={index} link={link} />
           ))}
