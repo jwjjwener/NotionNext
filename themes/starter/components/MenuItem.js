@@ -24,7 +24,7 @@ export const MenuItem = ({ link }) => {
           <SmartLink
             href={link?.href}
             target={link?.target}
-            className={`ud-menu-scroll mx-4 2xl:mx-6 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white xl:mr-0 xl:inline-flex xl:px-0 xl:py-6 xl:mx-2 xl:text-sm 2xl:mx-4 2xl:text-base xl:group-hover:opacity-70`}>
+            className={`ud-menu-scroll mx-4 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white 2xl:mr-0 2xl:inline-flex 2xl:px-0 2xl:py-6 2xl:mx-3 2xl:text-sm 2xl:group-hover:opacity-70`}>
             {link?.icon && <i className={link.icon + ' mr-2 my-auto'} />}
             {link?.name}
           </SmartLink>
@@ -36,7 +36,7 @@ export const MenuItem = ({ link }) => {
         <li className='submenu-item group relative whitespace-nowrap'>
           <button
             onClick={toggleSubMenu}
-            className={`cursor-pointer relative px-4 2xl:px-6 flex items-center justify-between py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white xl:ml-2 xl:mr-0 xl:inline-flex xl:py-6 xl:pl-0 xl:pr-4 xl:text-sm 2xl:text-base xl:group-hover:opacity-70 2xl:ml-4`}>
+            className={`cursor-pointer relative px-4 flex items-center justify-between py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white 2xl:ml-2 2xl:mr-0 2xl:inline-flex 2xl:py-6 2xl:pl-0 2xl:pr-4 2xl:text-sm 2xl:group-hover:opacity-70`}>
             <span>
               {link?.icon && <i className={link.icon + ' mr-2 my-auto'} />}
               {link?.name}
@@ -55,7 +55,7 @@ export const MenuItem = ({ link }) => {
 
           {/* 子菜单 */}
           <div
-            className={`submenu dark:border-gray-600 relative left-0 top-full w-[250px] rounded-sm bg-white p-4 transition-all duration-300 dark:bg-[#111] xl:absolute xl:shadow-lg ${
+            className={`submenu dark:border-gray-600 relative left-0 top-full w-[250px] rounded-sm bg-white p-4 transition-all duration-300 dark:bg-[#111] 2xl:absolute 2xl:shadow-lg ${
               isSubMenuOpen
                 ? 'block opacity-100 visible'
                 : 'hidden opacity-0 invisible'
