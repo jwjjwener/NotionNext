@@ -7,7 +7,13 @@ import { SVGAvatarBG } from './svg/SVGAvatarBG'
 export const Team = () => {
   const STARTER_TEAM_ITEMS = siteConfig('STARTER_TEAM_ITEMS', [])
   const { lang } = useGlobal()
-  const isEn = lang?.startsWith('en')
+
+  // 根据语言选择数组项中的翻译字段
+  const t = (item, field) => {
+    if (lang?.startsWith('zh') && item[field + '_CN']) return item[field + '_CN']
+    if (lang?.startsWith('ro') && item[field + '_RO']) return item[field + '_RO']
+    return item[field]
+  }
   return (
     <>
       {/* <!-- ====== Team Section Start --> */}
@@ -61,7 +67,7 @@ export const Team = () => {
                       </h4>
 
                       <p className='mb-5 text-sm text-body-color dark:text-dark-6'>
-                        {isEn && item.STARTER_TEAM_ITEM_DESCRIPTION_EN ? item.STARTER_TEAM_ITEM_DESCRIPTION_EN : item.STARTER_TEAM_ITEM_DESCRIPTION}
+                        {t(item, 'STARTER_TEAM_ITEM_DESCRIPTION')}
                       </p>
 
                       {/* 社交链接 */}

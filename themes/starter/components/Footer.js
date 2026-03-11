@@ -14,7 +14,13 @@ export const Footer = props => {
     : []
   const STARTER_FOOTER_LINK_GROUP = siteConfig('STARTER_FOOTER_LINK_GROUP', [])
   const { lang } = useGlobal()
-  const isEn = lang?.startsWith('en')
+
+  // 根据语言选择数组项中的翻译字段
+  const t = (item, field) => {
+    if (lang?.startsWith('zh') && item[field + '_CN']) return item[field + '_CN']
+    if (lang?.startsWith('ro') && item[field + '_RO']) return item[field + '_RO']
+    return item[field]
+  }
   return (
     <>
       {/* <!-- ====== Footer Section Start --> */}
@@ -47,7 +53,7 @@ export const Footer = props => {
                   className='w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12'>
                   <div className='mb-10 w-full'>
                     <h4 className='mb-9 text-lg font-semibold text-white'>
-                      {isEn && item.TITLE_EN ? item.TITLE_EN : item.TITLE}
+                      {t(item, 'TITLE')}
                     </h4>
                     <ul>
                       {item?.LINK_GROUP?.map((l, i) => {
@@ -56,7 +62,7 @@ export const Footer = props => {
                             <SmartLink
                               href={l.URL}
                               className='mb-3 inline-block text-base text-gray-7 hover:text-primary'>
-                              {isEn && l.TITLE_EN ? l.TITLE_EN : l.TITLE}
+                              {t(l, 'TITLE')}
                             </SmartLink>
                           </li>
                         )

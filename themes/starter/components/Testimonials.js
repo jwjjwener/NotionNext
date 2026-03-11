@@ -62,8 +62,14 @@ export const Testimonials = () => {
   // 用户评分
   const ratings = [1, 2, 3, 4, 5]
   const { lang } = useGlobal()
-  const isEn = lang?.startsWith('en')
   const STARTER_TESTIMONIALS_ITEMS = siteConfig('STARTER_TESTIMONIALS_ITEMS')
+
+  // 根据语言选择数组项中的翻译字段
+  const t = (item, field) => {
+    if (lang?.startsWith('zh') && item[field + '_CN']) return item[field + '_CN']
+    if (lang?.startsWith('ro') && item[field + '_RO']) return item[field + '_RO']
+    return item[field]
+  }
   return (
     <>
       {/* <!-- ====== Testimonial Section Start --> */}
@@ -106,7 +112,7 @@ export const Testimonials = () => {
                         </div>
 
                         <p className='mb-6 text-base text-body-color dark:text-dark-6'>
-                          {isEn && item.STARTER_TESTIMONIALS_ITEM_TEXT_EN ? item.STARTER_TESTIMONIALS_ITEM_TEXT_EN : item.STARTER_TESTIMONIALS_ITEM_TEXT}
+                          {t(item, 'STARTER_TESTIMONIALS_ITEM_TEXT')}
                         </p>
 
                         <a
@@ -125,7 +131,7 @@ export const Testimonials = () => {
                               {item.STARTER_TESTIMONIALS_ITEM_NICKNAME}
                             </h3>
                             <p className='text-xs text-body-secondary'>
-                              {isEn && item.STARTER_TESTIMONIALS_ITEM_DESCRIPTION_EN ? item.STARTER_TESTIMONIALS_ITEM_DESCRIPTION_EN : item.STARTER_TESTIMONIALS_ITEM_DESCRIPTION}
+                              {t(item, 'STARTER_TESTIMONIALS_ITEM_DESCRIPTION')}
                             </p>
                           </div>
                         </a>
