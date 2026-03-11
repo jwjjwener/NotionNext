@@ -27,8 +27,8 @@ const CONFIG = {
   // Hero 轮播图配置（优先于 PREVIEW_IMAGE）
   STARTER_HERO_CAROUSEL_IMAGES: [
     '/images/starter/hero/cnl.jpg',
-    '/images/starter/hero/hero-image.webp',
-    '/images/starter/hero/banner.webp',
+    '/images/starter/hero/hero-02.jpg',
+    '/images/starter/hero/hero-03.jpg',
   ],
   STARTER_HERO_CAROUSEL_INTERVAL: 5000, // 轮播切换间隔（毫秒）
 
