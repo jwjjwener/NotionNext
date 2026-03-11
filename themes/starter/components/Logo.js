@@ -45,7 +45,7 @@ export const Logo = props => {
   }, [isDarkMode, router])
 
   return (
-    <div className='w-60 max-w-full px-4'>
+    <div className='w-48 sm:w-60 max-w-full px-4'>
       <div className='navbar-logo flex items-center w-full py-5 cursor-pointer'>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         {logo && (
@@ -64,7 +64,7 @@ export const Logo = props => {
           onClick={() => {
             router.push('/')
           }}
-          className={`${logoTextColor} logo dark:text-white py-1.5 header-logo-text whitespace-nowrap text-2xl font-semibold`}>
+          className={`${logoTextColor} logo dark:text-white py-1.5 header-logo-text whitespace-nowrap text-lg sm:text-2xl font-semibold`}>
           {siteConfig('TITLE')}
         </span>
       </div>
