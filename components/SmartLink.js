@@ -42,8 +42,10 @@ const SmartLink = ({ href, children, ...rest }) => {
   }
 
   // 内部链接（可为对象形式）
+  // 禁用 prefetch：默认 prefetch=true 会在首页触发 20+ 个 _next/data/*.json 请求，
+  // 对新用户（无缓存）造成连接饱和，load 事件被阻塞长达 1 分钟
   return (
-    <Link href={href} {...rest}>
+    <Link href={href} prefetch={false} {...rest}>
       {children}
     </Link>
   )
