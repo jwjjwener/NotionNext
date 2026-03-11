@@ -204,6 +204,11 @@ const Style = () => {
   height: auto;
   width: auto;
 }
+
+@keyframes heroProgressFill {
+  from { width: 0%; }
+  to { width: 100%; }
+}
   `}</style>
 }
 

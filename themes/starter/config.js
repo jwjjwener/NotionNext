@@ -24,6 +24,14 @@ const CONFIG = {
   STARTER_HERO_PREVIEW_IMAGE: '/images/starter/hero/cnl.jpg', // 产品预览图 ，默认读取public目录下图片
   STARTER_HERO_BANNER_IMAGE: '', // hero区下方的全宽图
 
+  // Hero 轮播图配置（优先于 PREVIEW_IMAGE）
+  STARTER_HERO_CAROUSEL_IMAGES: [
+    '/images/starter/hero/cnl.jpg',
+    '/images/starter/hero/hero-image.webp',
+    '/images/starter/hero/banner.webp',
+  ],
+  STARTER_HERO_CAROUSEL_INTERVAL: 5000, // 轮播切换间隔（毫秒）
+
   // 顶部右侧导航按钮
   STARTER_NAV_BUTTON_1_TEXT: '',
   STARTER_NAV_BUTTON_1_URL: '',
@@ -46,7 +54,7 @@ const CONFIG = {
   STARTER_FEATURE_1_TEXT_1_EN: 'Professional Chinese courses from beginner to advanced, HSK exam preparation',
   STARTER_FEATURE_1_BUTTON_TEXT: '了解更多', // 特性1
   STARTER_FEATURE_1_BUTTON_TEXT_EN: 'Learn More',
-  STARTER_FEATURE_1_BUTTON_URL: '#pricing', // 特性1
+  STARTER_FEATURE_1_BUTTON_URL: '/ll', // 特性1 - 语言学习
 
   STARTER_FEATURE_2_TITLE_1: '中国旅游', // 特性2
   STARTER_FEATURE_2_TITLE_1_EN: 'Travel Chinese',
@@ -54,7 +62,7 @@ const CONFIG = {
   STARTER_FEATURE_2_TEXT_1_EN: 'Quick travel Chinese, practical conversations and cultural etiquette guidance',
   STARTER_FEATURE_2_BUTTON_TEXT: '了解更多', // 特性2
   STARTER_FEATURE_2_BUTTON_TEXT_EN: 'Learn More',
-  STARTER_FEATURE_2_BUTTON_URL: '#contact', // 特性2
+  STARTER_FEATURE_2_BUTTON_URL: '/ct', // 特性2 - 中国旅游
 
   STARTER_FEATURE_3_TITLE_1: '中国留学', // 特性3
   STARTER_FEATURE_3_TITLE_1_EN: 'Study in China',
@@ -62,7 +70,7 @@ const CONFIG = {
   STARTER_FEATURE_3_TEXT_1_EN: 'Study abroad consulting, academic Chinese improvement, campus life guidance',
   STARTER_FEATURE_3_BUTTON_TEXT: '了解更多', // 特性3
   STARTER_FEATURE_3_BUTTON_TEXT_EN: 'Learn More',
-  STARTER_FEATURE_3_BUTTON_URL: '#contact', // 特性3
+  STARTER_FEATURE_3_BUTTON_URL: '/sc', // 特性3 - 中国留学
 
   STARTER_FEATURE_4_TITLE_1: '文化历史学习', // 特性4
   STARTER_FEATURE_4_TITLE_1_EN: 'Culture & History',
@@ -70,7 +78,7 @@ const CONFIG = {
   STARTER_FEATURE_4_TEXT_1_EN: 'Chinese news analysis, in-depth cultural and historical courses',
   STARTER_FEATURE_4_BUTTON_TEXT: '了解更多', // 特性4
   STARTER_FEATURE_4_BUTTON_TEXT_EN: 'Learn More',
-  STARTER_FEATURE_4_BUTTON_URL: '#contact', // 特性4
+  STARTER_FEATURE_4_BUTTON_URL: '/cc', // 特性4 - 文化历史
 
   // 首页ABOUT区块
   STARTER_ABOUT_ENABLE: true, // ABOUT区块开关
