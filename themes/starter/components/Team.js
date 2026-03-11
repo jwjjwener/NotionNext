@@ -13,7 +13,7 @@ export const Team = () => {
       {/* <!-- ====== Team Section Start --> */}
       <section
         id='team'
-        className='overflow-hidden bg-[#F0FDF4] pb-12 pt-20 dark:bg-black lg:pb-[90px] lg:pt-[120px]'>
+        className='overflow-hidden bg-[#FFE4E6] pb-12 pt-20 dark:bg-black lg:pb-[90px] lg:pt-[120px]'>
         <div className='container mx-auto'>
           <div className='-mx-4 flex flex-wrap'>
             <div className='w-full px-4'>

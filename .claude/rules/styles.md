@@ -7,23 +7,23 @@
 | 主色（按钮、链接、图标） | `primary` | `#0f766e`（翡翠绿 teal-700） |
 | 主色悬停 | `blue-dark` | `#0d6560`（深翡翠绿） |
 | 辅助色 | `secondary` | `#13C296`（绿色） |
-| 薄荷绿背景（亮色） | `bg-[#F0FDF4]` | `#F0FDF4`（极浅薄荷绿） |
+| 浅粉背景（亮色） | `bg-[#FFE4E6]` | `#FFE4E6`（浅粉色） |
 | 白色背景（亮色） | `bg-white` | 白色 |
 | 区块背景（暗色） | `dark:bg-black` | `#000`（纯黑） |
 | 卡片背景（暗色） | `dark:bg-[#111]` | `#111`（微亮黑） |
 
-**设计原则**: 浅色模式使用极浅薄荷绿 `#F0FDF4` 与白色交替背景，翡翠绿仅用于强调元素（按钮、链接、图标）。暗色模式统一纯黑。
+**设计原则**: 浅色模式使用浅粉色 `#FFE4E6` 与白色交替背景，翡翠绿仅用于强调元素（按钮、链接、图标）。暗色模式统一纯黑。
 
 ### 首页区块背景交替规则（浅色模式）
 
 ```
-Hero(薄荷绿) → Features(白) → About(薄荷绿) → Pricing(白) →
-Testimonials(薄荷绿) → FAQ(白) → Team(薄荷绿) → Blog(白) → Contact(薄荷绿) → CTA(翡翠绿)
+Hero(浅粉) → Features(白) → About(浅粉) → Pricing(白) →
+Testimonials(浅粉) → FAQ(白) → Team(浅粉) → Blog(白) → Contact(浅粉) → CTA(翡翠绿)
 ```
 
-- 薄荷绿区块：`bg-[#F0FDF4]`
+- 浅粉区块：`bg-[#FFE4E6]`
 - 白色区块：`bg-white`
-- 导航栏 sticky：`rgb(240 253 244 / 0.85)`（薄荷绿半透明）
+- 导航栏 sticky：`rgb(255 228 230 / 0.85)`（浅粉半透明）
 - 所有区块暗色模式不变：`dark:bg-black`
 
 ## 暗色模式设计规范
@@ -67,12 +67,12 @@ Testimonials(薄荷绿) → FAQ(白) → Team(薄荷绿) → Blog(白) → Conta
 - 导航栏 `style.js`：所有 `rgb(55 88 249)` → `rgb(15 118 110)`
 - SVG 图标：`fill="white"` → `fill="currentColor"`
 
-### 浅色模式薄荷绿白交替背景
+### 浅色模式浅粉白交替背景
 
-- 区块交替背景色：`#F0FDF4`（极浅薄荷绿）与白色
-- Hero/About/Testimonials/Team/Contact：`bg-[#F0FDF4]`
+- 区块交替背景色：`#FFE4E6`（浅粉色）与白色
+- Hero/About/Testimonials/Team/Contact：`bg-[#FFE4E6]`
 - Features/Pricing/FAQ/Blog：`bg-white`
-- 导航栏 sticky：`rgb(240 253 244 / 0.85)`（薄荷绿半透明）
+- 导航栏 sticky：`rgb(255 228 230 / 0.85)`（浅粉半透明）
 
 ### 暗色模式统一（commit: 880e1277）
 

@@ -39,7 +39,7 @@ public/images/starter/
 ## 常见修改场景
 
 ### 改首页文案
-直接编辑 `themes/starter/config.js` 中对应的 `STARTER_XXX` 值，或在 Notion 中创建 Config 类型记录覆盖。
+直接编辑 `themes/starter/config.js` 中对应的 `STARTER_XXX` 值，或在 Notion 中创建 Config 类型记录覆盖。**⚠️ 改中文文案时必须同步更新 `_EN` 英文翻译**，详见 `i18n.md`。
 
 ### 改首页图片
 1. 将图片放入 `public/images/starter/` 对应目录
