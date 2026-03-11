@@ -225,6 +225,12 @@ const Style = () => {
 .wow.animated {
   animation: fadeInUp 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
+
+@keyframes shakeX {
+  0%,100% { transform: translateX(0); }
+  10%,30%,50%,70%,90% { transform: translateX(-5px); }
+  20%,40%,60%,80% { transform: translateX(5px); }
+}
   `}</style>
 }
 

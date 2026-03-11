@@ -132,9 +132,10 @@ const ExternalPlugin = props => {
   const UMAMI_HOST = siteConfig('UMAMI_HOST', null, NOTION_CONFIG)
   const UMAMI_ID = siteConfig('UMAMI_ID', null, NOTION_CONFIG)
 
+  const THEME = siteConfig('THEME')
+
   // 自定义样式css和js引入
   if (isBrowser) {
-    // 初始化AOS动画
     // 静态导入本地自定义样式
     loadExternalResource('/css/custom.css', 'css')
     loadExternalResource('/js/custom.js', 'js')
@@ -144,7 +145,7 @@ const ExternalPlugin = props => {
       loadExternalResource('/css/img-shadow.css', 'css')
     }
 
-    if (ANIMATE_CSS_URL) {
+    if (ANIMATE_CSS_URL && THEME !== 'starter') {
       loadExternalResource(ANIMATE_CSS_URL, 'css')
     }
 
@@ -220,7 +221,7 @@ const ExternalPlugin = props => {
       {TIANLI_KEY && <TianliGPT />}
       <VConsole />
       {ENABLE_NPROGRSS && <LoadingProgress />}
-      <AosAnimation />
+      {THEME !== 'starter' && <AosAnimation />}
       {ANALYTICS_51LA_ID && ANALYTICS_51LA_CK && <LA51 />}
       {COZE_BOT_ID && <Coze />}
 
