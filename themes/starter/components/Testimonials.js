@@ -65,7 +65,7 @@ export const Testimonials = () => {
       {/* <!-- ====== Testimonial Section Start --> */}
       <section
         id='testimonials'
-        className='overflow-hidden bg-gray-1 py-20 dark:bg-black md:py-[120px]'>
+        className='overflow-hidden bg-[#FFF0F3] py-20 dark:bg-black md:py-[120px]'>
         <div className='container mx-auto'>
           <div className='-mx-4 flex flex-wrap justify-center'>
             <div className='w-full px-4'>
