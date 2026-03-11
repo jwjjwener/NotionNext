@@ -14,7 +14,7 @@ export const CTA = () => {
   return (
     <>
       {/* <!-- ====== CTA Section Start --> */}
-      <section className='relative z-10 overflow-hidden bg-[#881337] dark:bg-black py-20 lg:py-[115px]'>
+      <section className='relative z-10 overflow-hidden bg-[#0f766e] dark:bg-black py-20 lg:py-[115px]'>
         <div className='container mx-auto'>
           <div className='relative overflow-hidden'>
             <div className='-mx-4 flex flex-wrap items-stretch'>
