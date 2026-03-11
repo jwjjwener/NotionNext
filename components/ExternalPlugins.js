@@ -136,9 +136,11 @@ const ExternalPlugin = props => {
 
   // 自定义样式css和js引入
   if (isBrowser) {
-    // 静态导入本地自定义样式
-    loadExternalResource('/css/custom.css', 'css')
-    loadExternalResource('/js/custom.js', 'js')
+    // starter主题不需要这些自定义文件，跳过以减少网络请求
+    if (THEME !== 'starter') {
+      loadExternalResource('/css/custom.css', 'css')
+      loadExternalResource('/js/custom.js', 'js')
+    }
 
     // 自动添加图片阴影
     if (IMG_SHADOW) {
