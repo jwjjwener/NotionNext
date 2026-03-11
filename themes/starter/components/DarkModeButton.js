@@ -1,9 +1,8 @@
 import { useGlobal } from '@/lib/global';
-import { useRouter } from 'next/router';
+
 
 export const DarkModeButton = () => {
   const { toggleDarkMode } = useGlobal()
-  const router = useRouter()
   return <>
             <label
                 // for="themeSwitcher"
@@ -19,7 +18,7 @@ export const DarkModeButton = () => {
                   className="sr-only"
                 />
 
-                <span className={`block ${router.route === '/' ? 'text-white' : ''} dark:hidden`}>
+                <span className="block text-dark dark:hidden">
                   <svg
                     className="fill-current"
                     width="24"
