@@ -21,7 +21,7 @@ export const LangSwitchButton = () => {
       className='inline-flex items-center justify-center rounded-md px-2 py-1 text-sm font-medium text-dark dark:text-white hover:text-primary dark:hover:text-primary transition'
       aria-label='Switch Language'
       title={isEn ? '切换到中文' : 'Switch to English'}>
-      {isEn ? '中文' : 'EN'}
+      {isEn ? 'EN' : 'CN'}
     </button>
   )
 }
