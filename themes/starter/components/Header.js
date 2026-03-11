@@ -22,18 +22,34 @@ export const Header = props => {
 
   const enableClerk = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
 
+  // 非首页路由始终显示 sticky 导航栏
+  const isHomePage = router.pathname === '/'
+
   useEffect(() => {
     if (isDarkMode) {
       setColor('text-white')
     } else {
       setColor('')
     }
-    // ======= Sticky
-    window.addEventListener('scroll', navBarScollListener)
+
+    const ud_header = document.querySelector('.ud-header')
+    if (!isHomePage) {
+      // 非首页：始终添加 sticky，不需要滚动监听
+      ud_header?.classList?.add('sticky')
+    } else {
+      // 首页：根据滚动位置决定
+      window.addEventListener('scroll', navBarScollListener)
+      // 初始化时也检查一次（处理客户端导航回首页的情况）
+      if (window.scrollY > 0) {
+        ud_header?.classList?.add('sticky')
+      } else {
+        ud_header?.classList?.remove('sticky')
+      }
+    }
     return () => {
       window.removeEventListener('scroll', navBarScollListener)
     }
-  }, [isDarkMode])
+  }, [isDarkMode, isHomePage])
 
   // 滚动监听
   const throttleMs = 200
