@@ -40,7 +40,7 @@ export const Pricing = () => {
                   <span className='text-xl font-medium'>
                     {siteConfig('STARTER_PRICING_1_PRICE_CURRENCY')}
                   </span>
-                  <span className='-ml-1 -tracking-[2px]'>
+                  <span className='-ml-1 -tracking-[2px] font-extrabold'>
                     {siteConfig('STARTER_PRICING_1_PRICE')}
                   </span>
                   <span className='text-base font-normal text-body-color dark:text-dark-6'>
@@ -76,7 +76,7 @@ export const Pricing = () => {
 
             {/* 第二个付费计划 */}
             <div className='w-full px-4 md:w-1/2 lg:w-1/3'>
-              <div className='relative z-10 mb-10 overflow-hidden rounded-xl bg-white px-8 py-10 shadow-pricing dark:bg-[#111] sm:p-12 lg:px-6 lg:py-10 xl:p-14'>
+              <div className='relative z-10 mb-10 overflow-hidden rounded-xl bg-white px-8 py-10 shadow-pricing dark:bg-[#111] dark:border dark:border-[rgba(15,118,110,0.3)] sm:p-12 lg:px-6 lg:py-10 xl:p-14'>
                 <p
                   style={{
                     writingMode: 'vertical-rl',
@@ -92,7 +92,7 @@ export const Pricing = () => {
                   <span className='text-xl font-medium'>
                     {siteConfig('STARTER_PRICING_2_PRICE_CURRENCY')}
                   </span>
-                  <span className='-ml-1 -tracking-[2px]'>
+                  <span className='-ml-1 -tracking-[2px] font-extrabold'>
                     {siteConfig('STARTER_PRICING_2_PRICE')}
                   </span>
                   <span className='text-base font-normal text-body-color dark:text-dark-6'>
@@ -136,7 +136,7 @@ export const Pricing = () => {
                   <span className='text-xl font-medium'>
                     {siteConfig('STARTER_PRICING_3_PRICE_CURRENCY')}
                   </span>
-                  <span className='-ml-1 -tracking-[2px]'>
+                  <span className='-ml-1 -tracking-[2px] font-extrabold'>
                     {siteConfig('STARTER_PRICING_3_PRICE')}
                   </span>
                   <span className='text-base font-normal text-body-color dark:text-dark-6'>
