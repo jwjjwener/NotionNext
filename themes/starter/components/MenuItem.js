@@ -24,7 +24,7 @@ export const MenuItem = ({ link }) => {
           <SmartLink
             href={link?.href}
             target={link?.target}
-            className={`ud-menu-scroll mx-4 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:mx-2 lg:inline-flex lg:px-0 lg:py-6`}>
+            className={`ud-menu-scroll mx-4 flex py-2 text-base font-bold text-dark group-hover:text-primary dark:text-white lg:mx-5 lg:inline-flex lg:px-0 lg:py-6`}>
             {link?.icon && <i className={link.icon + ' mr-2 my-auto'} />}
             {link?.name}
           </SmartLink>
@@ -36,7 +36,7 @@ export const MenuItem = ({ link }) => {
         <li className='submenu-item group relative whitespace-nowrap'>
           <button
             onClick={toggleSubMenu}
-            className={`cursor-pointer relative px-4 flex items-center justify-between py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:mx-2 lg:inline-flex lg:py-6`}>
+            className={`cursor-pointer relative px-4 flex items-center justify-between py-2 text-base font-bold text-dark group-hover:text-primary dark:text-white lg:mx-5 lg:inline-flex lg:py-6`}>
             <span>
               {link?.icon && <i className={link.icon + ' mr-2 my-auto'} />}
               {link?.name}
