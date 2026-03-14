@@ -51,7 +51,7 @@ export const Hero = props => {
                     <li>
                       <SmartLink
                         href={siteConfig('STARTER_HERO_BUTTON_1_URL', '')}
-                        className='inline-flex items-center justify-center rounded-md bg-primary px-7 py-[14px] text-center text-base font-medium text-white shadow-1 transition duration-300 ease-in-out hover:bg-[#0d6560]'>
+                        className='inline-flex items-center justify-center rounded-md bg-[#1e3a5f] px-7 py-[14px] text-center text-base font-medium text-white shadow-1 transition duration-300 ease-in-out hover:bg-[#162d4a]'>
                         {heroButton1Icon && (
                           <img
                             className='mr-3 h-5 w-5'
