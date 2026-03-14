@@ -39,8 +39,8 @@ export const Hero = props => {
                 data-wow-delay='.2s'>
                 {/* 主标题 */}
                 <h1
-                  style={{ fontSize: 'clamp(1.5rem, 3vw, 2.75rem)' }}
-                  className='mb-6 font-bold leading-snug text-dark dark:text-white lg:whitespace-nowrap'>
+                  style={{ fontSize: 'clamp(1.25rem, 5.5vw, 2.75rem)' }}
+                  className='mb-6 font-bold leading-snug text-dark dark:text-white whitespace-nowrap'>
                   {useStarterI18n('STARTER_HERO_TITLE_1', null, config)}
                 </h1>
                 {/* 次标题 */}
