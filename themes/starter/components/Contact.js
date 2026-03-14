@@ -7,9 +7,7 @@ export const Contact = () => {
   return (
     <>
       {/* <!-- ====== Contact Start ====== --> */}
-      <section id='contact' className='relative py-20 md:py-[120px]'>
-        <div className='absolute left-0 top-0 -z-[1] h-full w-full dark:bg-black'></div>
-        <div className='absolute left-0 top-0 -z-[1] h-1/2 w-full bg-[#FFE4E6] dark:bg-[#111] lg:h-[45%] xl:h-1/2'></div>
+      <section id='contact' className='bg-[#FFE4E6] dark:bg-black py-20 md:py-[120px]'>
         <div className='container px-4'>
           <div className='mx-auto max-w-[700px]'>
             <div className='mb-10 text-center lg:text-left'>
