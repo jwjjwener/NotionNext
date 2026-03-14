@@ -6,13 +6,13 @@ import { useEffect, useState } from 'react'
 import { MenuItem } from './MenuItem'
 
 /**
- * 响应式 折叠菜单
+ * 导航菜单 — 水平展开居中
  */
 export const MenuList = props => {
   const { customNav, customMenu } = props
   const { locale } = useGlobal()
 
-  const [showMenu, setShowMenu] = useState(false) // 控制菜单展开/收起状态
+  const [showMenu, setShowMenu] = useState(false)
   const router = useRouter()
 
   let links = [
@@ -52,7 +52,7 @@ export const MenuList = props => {
   }
 
   const toggleMenu = () => {
-    setShowMenu(!showMenu) // 切换菜单状态
+    setShowMenu(!showMenu)
   }
 
   useEffect(() => {
@@ -64,12 +64,12 @@ export const MenuList = props => {
   }
 
   return (
-    <div>
+    <div className='flex w-full items-center justify-center'>
       {/* 移动端菜单切换按钮 */}
       <button
         id='navbarToggler'
         onClick={toggleMenu}
-        className={`absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 ${
+        className={`absolute right-4 top-1/2 block lg:hidden -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 ${
           showMenu ? 'navbarTogglerActive' : ''
         }`}>
         <span className='relative my-[6px] block h-[2px] w-[30px] bg-dark dark:bg-white duration-200 transition-all'></span>
@@ -77,9 +77,18 @@ export const MenuList = props => {
         <span className='relative my-[6px] block h-[2px] w-[30px] bg-dark dark:bg-white duration-200 transition-all'></span>
       </button>
 
+      {/* 桌面端：水平展开居中 */}
+      <nav className='hidden lg:block'>
+        <ul className='flex items-center gap-2'>
+          {links?.map((link, index) => (
+            <MenuItem key={index} link={link} />
+          ))}
+        </ul>
+      </nav>
+
+      {/* 移动端：下拉菜单 */}
       <nav
-        id='navbarCollapse'
-        className={`absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-[#111] ${
+        className={`absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-[#111] lg:hidden ${
           showMenu ? '' : 'hidden'
         }`}>
         <ul className='block'>
