@@ -18,11 +18,11 @@ export const FAQ = () => {
   return (
     <>
       {/* <!-- ====== FAQ Section Start --> */}
-      <section className='relative overflow-hidden bg-white pb-8 pt-20 dark:bg-black lg:pb-[50px] lg:pt-[120px]'>
+      <section className='relative overflow-hidden bg-white pb-12 pt-20 dark:bg-black lg:pb-[90px] lg:pt-[120px]'>
         <div className='container mx-auto'>
           <div className='-mx-4 flex flex-wrap'>
             <div className='w-full px-4'>
-              <div className='mx-auto mb-[60px] max-w-[520px] text-center'>
+              <div className='mx-auto mb-[60px] max-w-[485px] text-center'>
                 <span className='mb-2 block text-lg font-semibold text-primary'>
                   {useStarterI18n('STARTER_FAQ_TITLE')}
                 </span>

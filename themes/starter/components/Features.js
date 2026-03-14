@@ -8,11 +8,11 @@ export const Features = () => {
   return (
     <>
       {/* <!-- ====== Features Section Start --> */}
-      <section className='bg-white pb-8 pt-20 dark:bg-black lg:pb-[70px] lg:pt-[120px]'>
-        <div className='container'>
+      <section className='bg-white pb-12 pt-20 dark:bg-black lg:pb-[90px] lg:pt-[120px]'>
+        <div className='container mx-auto'>
           <div className='-mx-4 flex flex-wrap'>
             <div className='w-full px-4'>
-              <div className='mx-auto mb-12 max-w-[485px] text-center lg:mb-[70px]'>
+              <div className='mx-auto mb-[60px] max-w-[485px] text-center'>
                 <span className='mb-2 block text-lg font-semibold text-primary'>
                   {useStarterI18n('STARTER_FEATURE_TITLE')}
                 </span>
@@ -28,7 +28,7 @@ export const Features = () => {
           <div className='-mx-4 flex flex-wrap justify-center'>
             {/* 语言学习 */}
             <div className='w-full px-4 md:w-1/2 lg:w-5/12'>
-              <div className='wow fadeInUp group mb-12 rounded-xl bg-white dark:bg-[#111] p-8 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:shadow-lg transition' data-wow-delay='.1s'>
+              <div className='wow fadeInUp group mb-12 rounded-xl bg-white dark:bg-[#111] p-8 shadow-testimonial dark:shadow-none hover:shadow-lg transition' data-wow-delay='.1s'>
                 <div className='relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary bg-opacity-20 text-primary'>
                   <span className='absolute left-0 top-0 -z-[1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-[14px] bg-primary bg-opacity-10 duration-300 group-hover:rotate-45'></span>
                   {/* 语言图标 */}
@@ -57,7 +57,7 @@ export const Features = () => {
 
             {/* 旅游中文 */}
             <div className='w-full px-4 md:w-1/2 lg:w-5/12'>
-              <div className='wow fadeInUp group mb-12 rounded-xl bg-white dark:bg-[#111] p-8 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:shadow-lg transition' data-wow-delay='.15s'>
+              <div className='wow fadeInUp group mb-12 rounded-xl bg-white dark:bg-[#111] p-8 shadow-testimonial dark:shadow-none hover:shadow-lg transition' data-wow-delay='.15s'>
                 <div className='relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary bg-opacity-20 text-primary'>
                   <span className='absolute left-0 top-0 -z-[1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-[14px] bg-primary bg-opacity-10 duration-300 group-hover:rotate-45'></span>
                   {/* 旅游图标 */}

@@ -75,7 +75,7 @@ export const Testimonials = () => {
       {/* <!-- ====== Testimonial Section Start --> */}
       <section
         id='testimonials'
-        className='overflow-hidden bg-[#FFE4E6] py-20 dark:bg-black md:py-[120px]'>
+        className='overflow-hidden bg-[#FFE4E6] pb-12 pt-20 dark:bg-black lg:pb-[90px] lg:pt-[120px]'>
         <div className='container mx-auto'>
           <div className='-mx-4 flex flex-wrap justify-center'>
             <div className='w-full px-4'>
@@ -100,7 +100,7 @@ export const Testimonials = () => {
                 {STARTER_TESTIMONIALS_ITEMS?.map((item, index) => {
                   return (
                     <div key={index} className='swiper-slide'>
-                      <div className='rounded-xl bg-white px-4 py-[30px] shadow-testimonial dark:bg-[#111] sm:px-[30px]'>
+                      <div className='rounded-xl bg-white px-4 py-[30px] shadow-testimonial dark:bg-[#111] dark:shadow-none sm:px-[30px]'>
                         <div className='mb-[18px] flex items-center gap-[2px]'>
                           {ratings.map((rating, index) => (
                             <img
