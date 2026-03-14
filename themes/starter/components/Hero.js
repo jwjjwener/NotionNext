@@ -33,14 +33,14 @@ export const Hero = props => {
         <div className='container'>
           <div className='-mx-4 flex flex-wrap items-center'>
             {/* 左侧：文字区域 */}
-            <div className='w-full px-4 lg:w-5/12'>
+            <div className='w-full px-4 lg:w-1/2'>
               <div
                 className='hero-content wow fadeInUp text-center lg:text-left'
                 data-wow-delay='.2s'>
                 {/* 主标题 */}
                 <h1
-                  style={{ fontSize: 'clamp(1.5rem, 4vw, 2.75rem)' }}
-                  className='mb-6 font-bold leading-snug text-dark dark:text-white'>
+                  style={{ fontSize: 'clamp(1.5rem, 3vw, 2.75rem)' }}
+                  className='mb-6 font-bold leading-snug text-dark dark:text-white lg:whitespace-nowrap'>
                   {useStarterI18n('STARTER_HERO_TITLE_1', null, config)}
                 </h1>
                 {/* 次标题 */}
@@ -71,7 +71,7 @@ export const Hero = props => {
 
             {/* 右侧：轮播图区域 */}
             {images.length > 0 && (
-              <div className='w-full px-4 lg:w-7/12'>
+              <div className='w-full px-4 lg:w-1/2'>
                 <div
                   className='wow fadeInUp relative z-10'
                   data-wow-delay='.25s'>
