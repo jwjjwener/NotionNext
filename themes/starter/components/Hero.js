@@ -38,7 +38,9 @@ export const Hero = props => {
                 className='hero-content wow fadeInUp text-center lg:text-left'
                 data-wow-delay='.2s'>
                 {/* 主标题 */}
-                <h1 className='mb-6 text-2xl font-bold leading-snug text-dark dark:text-white whitespace-nowrap sm:text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-[1.2]'>
+                <h1
+                  style={{ fontSize: 'clamp(1.5rem, 4vw, 2.75rem)' }}
+                  className='mb-6 font-bold leading-snug text-dark dark:text-white'>
                   {useStarterI18n('STARTER_HERO_TITLE_1', null, config)}
                 </h1>
                 {/* 次标题 */}
