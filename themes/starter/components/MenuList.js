@@ -64,21 +64,9 @@ export const MenuList = props => {
   }
 
   return (
-    <div className='flex w-full items-center justify-center'>
-      {/* 移动端菜单切换按钮 */}
-      <button
-        id='navbarToggler'
-        onClick={toggleMenu}
-        className={`absolute right-4 top-1/2 block lg:hidden -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 ${
-          showMenu ? 'navbarTogglerActive' : ''
-        }`}>
-        <span className='relative my-[6px] block h-[2px] w-[30px] bg-dark dark:bg-white duration-200 transition-all'></span>
-        <span className='relative my-[6px] block h-[2px] w-[30px] bg-dark dark:bg-white duration-200 transition-all'></span>
-        <span className='relative my-[6px] block h-[2px] w-[30px] bg-dark dark:bg-white duration-200 transition-all'></span>
-      </button>
-
+    <>
       {/* 桌面端：水平展开居中 */}
-      <nav className='hidden lg:block'>
+      <nav className='hidden lg:flex flex-1 justify-center'>
         <ul className='flex items-center gap-2'>
           {links?.map((link, index) => (
             <MenuItem key={index} link={link} />
@@ -86,7 +74,21 @@ export const MenuList = props => {
         </ul>
       </nav>
 
-      {/* 移动端：下拉菜单 */}
+      {/* 移动端：汉堡按钮 + 下拉菜单 */}
+      <div className='lg:hidden flex items-center'>
+        <button
+          id='navbarToggler'
+          onClick={toggleMenu}
+          className={`rounded-lg px-3 py-[6px] ring-primary focus:ring-2 ${
+            showMenu ? 'navbarTogglerActive' : ''
+          }`}>
+          <span className='relative my-[6px] block h-[2px] w-[30px] bg-dark dark:bg-white duration-200 transition-all'></span>
+          <span className='relative my-[6px] block h-[2px] w-[30px] bg-dark dark:bg-white duration-200 transition-all'></span>
+          <span className='relative my-[6px] block h-[2px] w-[30px] bg-dark dark:bg-white duration-200 transition-all'></span>
+        </button>
+      </div>
+
+      {/* 移动端下拉菜单 */}
       <nav
         className={`absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-[#111] lg:hidden ${
           showMenu ? '' : 'hidden'
@@ -97,6 +99,6 @@ export const MenuList = props => {
           ))}
         </ul>
       </nav>
-    </div>
+    </>
   )
 }

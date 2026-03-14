@@ -7,7 +7,7 @@ export const Contact = () => {
   return (
     <>
       {/* <!-- ====== Contact Start ====== --> */}
-      <section id='contact' className='bg-[#FFE4E6] dark:bg-black py-20 md:py-[120px]'>
+      <section id='contact' className='bg-white dark:bg-black py-20 md:py-[120px]'>
         <div className='container px-4'>
           <div className='mx-auto max-w-[700px]'>
             <div className='mb-10 text-center lg:text-left'>

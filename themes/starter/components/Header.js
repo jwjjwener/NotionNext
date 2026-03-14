@@ -81,7 +81,7 @@ export const Header = props => {
               <MenuList {...props} />
 
               {/* 右侧功能 */}
-              <div className='flex items-center gap-2 sm:gap-4 justify-end'>
+              <div className='flex items-center gap-2 sm:gap-4 justify-end shrink-0 z-10'>
                 {/* 语言切换 */}
                 <LangSwitchButton />
                 {/* 深色模式切换 */}

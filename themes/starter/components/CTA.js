@@ -19,7 +19,7 @@ export const CTA = () => {
           <div className='relative overflow-hidden'>
             <div className='-mx-4 flex flex-wrap items-stretch'>
               <div className='w-full px-4'>
-                <div className='mx-auto max-w-[570px] text-center'>
+                <div className='mx-auto max-w-[700px] text-center'>
                   <h2 className='mb-2.5 text-3xl font-bold text-white md:text-[38px] md:leading-[1.44]'>
                     <span className='block'>{useStarterI18n('STARTER_CTA_TITLE')}</span>
                     <span className='block text-3xl font-normal md:text-[40px]'>
