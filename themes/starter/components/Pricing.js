@@ -78,14 +78,16 @@ export const Pricing = () => {
             {/* 第二个付费计划 */}
             <div className='w-full px-4 md:w-1/2 lg:w-1/3'>
               <div className='relative z-10 mb-10 overflow-hidden rounded-xl bg-white px-8 py-10 shadow-pricing dark:bg-[#111] dark:border dark:border-[rgba(15,118,110,0.3)] sm:p-12 lg:px-6 lg:py-10 xl:p-14'>
-                <p
-                  style={{
-                    writingMode: 'vertical-rl',
-                    textOrientation: 'mixed'
-                  }}
-                  className='absolute p-1 right-0 top-0 inline-block rounded-bl-md rounded-tl-md bg-primary text-base font-medium text-white tracking-wider'>
-                  {useStarterI18n('STARTER_PRICING_2_TAG')}
-                </p>
+                {useStarterI18n('STARTER_PRICING_2_TAG') && (
+                  <p
+                    style={{
+                      writingMode: 'vertical-rl',
+                      textOrientation: 'mixed'
+                    }}
+                    className='absolute p-1 right-0 top-0 inline-block rounded-bl-md rounded-tl-md bg-primary text-base font-medium text-white tracking-wider'>
+                    {useStarterI18n('STARTER_PRICING_2_TAG')}
+                  </p>
+                )}
                 <span className='mb-5 block text-xl font-medium text-dark dark:text-white'>
                   {useStarterI18n('STARTER_PRICING_2_TITLE')}
                 </span>
