@@ -31,7 +31,7 @@ export const About = () => {
 
                   <SmartLink
                     href={siteConfig('STARTER_ABOUT_BUTTON_URL', '')}
-                    className='inline-flex items-center justify-center rounded-md border border-primary bg-primary px-7 py-3 text-center text-base font-medium text-white hover:border-blue-dark hover:bg-blue-dark'>
+                    className='inline-flex items-center justify-center rounded-md border border-[#D4E9F7] bg-[#D4E9F7] px-7 py-3 text-center text-base font-medium text-[#01367A] hover:border-[#b8d9f0] hover:bg-[#b8d9f0]'>
                     {useStarterI18n('STARTER_ABOUT_BUTTON_TEXT')}
                   </SmartLink>
                 </div>
@@ -59,15 +59,15 @@ export const About = () => {
                       />
                     </div>
 
-                    <div className='relative z-10 mb-4 flex items-center justify-center overflow-hidden bg-primary px-6 py-12 sm:mb-8 sm:h-[160px] sm:p-5 lg:mb-4 xl:mb-8'>
+                    <div className='relative z-10 mb-4 flex items-center justify-center overflow-hidden bg-[#D4E9F7] px-6 py-12 sm:mb-8 sm:h-[160px] sm:p-5 lg:mb-4 xl:mb-8'>
                       <div>
-                        <span className='block text-5xl font-extrabold text-white'>
+                        <span className='block text-5xl font-extrabold text-[#01367A]'>
                           {siteConfig('STARTER_ABOUT_TIPS_1')}
                         </span>
-                        <span className='block text-base font-semibold text-white'>
+                        <span className='block text-base font-semibold text-[#01367A]'>
                           {useStarterI18n('STARTER_ABOUT_TIPS_2')}
                         </span>
-                        <span className='block text-base font-medium text-white text-opacity-70'>
+                        <span className='block text-base font-medium text-[#01367A] text-opacity-70'>
                           {useStarterI18n('STARTER_ABOUT_TIPS_3')}
                         </span>
                       </div>

@@ -69,7 +69,7 @@ export const Pricing = () => {
                 </div>
                 <SmartLink
                   href={siteConfig('STARTER_PRICING_1_BUTTON_URL', '')}
-                  className='inline-block rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white transition hover:bg-blue-dark'>
+                  className='inline-block rounded-md bg-[#D4E9F7] px-7 py-3 text-center text-base font-medium text-[#01367A] transition hover:bg-[#b8d9f0]'>
                   {useStarterI18n('STARTER_PRICING_1_BUTTON_TEXT')}
                 </SmartLink>
               </div>
@@ -123,7 +123,7 @@ export const Pricing = () => {
                 </div>
                 <SmartLink
                   href={siteConfig('STARTER_PRICING_2_BUTTON_URL', '')}
-                  className='inline-block rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white transition hover:bg-blue-dark'>
+                  className='inline-block rounded-md bg-[#D4E9F7] px-7 py-3 text-center text-base font-medium text-[#01367A] transition hover:bg-[#b8d9f0]'>
                   {useStarterI18n('STARTER_PRICING_2_BUTTON_TEXT')}
                 </SmartLink>
               </div>
@@ -167,7 +167,7 @@ export const Pricing = () => {
                 </div>
                 <SmartLink
                   href={siteConfig('STARTER_PRICING_3_BUTTON_URL', '')}
-                  className='inline-block rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white transition hover:bg-blue-dark'>
+                  className='inline-block rounded-md bg-[#D4E9F7] px-7 py-3 text-center text-base font-medium text-[#01367A] transition hover:bg-[#b8d9f0]'>
                   {useStarterI18n('STARTER_PRICING_3_BUTTON_TEXT')}
                 </SmartLink>
               </div>

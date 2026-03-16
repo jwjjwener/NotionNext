@@ -33,7 +33,7 @@ export const CTA = () => {
                     <>
                       <SmartLink
                         href={siteConfig('STARTER_CTA_BUTTON_URL', '')}
-                        className='inline-block rounded-md border border-transparent bg-secondary px-7 py-3 text-base font-medium text-white transition hover:bg-[#0BB489]'>
+                        className='inline-block rounded-md border border-transparent bg-[#D4E9F7] px-7 py-3 text-base font-medium text-[#01367A] transition hover:bg-[#b8d9f0]'>
                         {useStarterI18n('STARTER_CTA_BUTTON_TEXT')}
                       </SmartLink>
                     </>
