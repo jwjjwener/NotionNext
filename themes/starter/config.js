@@ -30,7 +30,7 @@ const CONFIG = {
   STARTER_HERO_BUTTON_1_URL: 'https://wa.me/40748083168',
   STARTER_HERO_BUTTON_2_TEXT: '',
   STARTER_HERO_BUTTON_2_URL: '',
-  STARTER_HERO_BUTTON_1_ICON: '/themes/starter/components/svg/whatsapp.svg',
+  STARTER_HERO_BUTTON_1_ICON: '/images/starter/whatsapp.svg',
 
   // 英雄区配图
   STARTER_HERO_PREVIEW_IMAGE: '/images/starter/hero/cnl.jpg',
