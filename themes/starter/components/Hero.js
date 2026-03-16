@@ -29,7 +29,7 @@ export const Hero = props => {
       {/* <!-- ====== Hero Section Start --> */}
       <div
         id='home'
-        className='relative overflow-hidden bg-[#F3A8B3] dark:bg-black pt-[120px] md:pt-[130px] lg:pt-[160px] pb-16 lg:pb-20'>
+        className='relative overflow-hidden bg-[#FFE4E6] dark:bg-black pt-[120px] md:pt-[130px] lg:pt-[160px] pb-16 lg:pb-20'>
         <div className='container'>
           <div className='-mx-4 flex flex-wrap items-center'>
             {/* 左侧：文字区域 */}

@@ -13,7 +13,7 @@ export const About = () => {
       {/* <!-- ====== About Section Start --> */}
       <section
         id='about'
-        className='bg-[#F3A8B3] pb-12 pt-20 dark:bg-black lg:pb-[90px] lg:pt-[120px]'>
+        className='bg-[#FFE4E6] pb-12 pt-20 dark:bg-black lg:pb-[90px] lg:pt-[120px]'>
         <div className='container mx-auto'>
           <div className='wow fadeInUp' data-wow-delay='.2s'>
             <div className='-mx-4 flex flex-wrap items-center'>
