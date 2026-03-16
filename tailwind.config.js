@@ -51,8 +51,8 @@ module.exports = {
           7: '#D1D5DB',
           8: '#E5E7EB'
         },
-        primary: '#0f766e',
-        'blue-dark': '#0d6560',
+        primary: '#125FA3',
+        'blue-dark': '#0e4f8a',
         secondary: '#13C296',
         'body-color': '#637381',
         'body-secondary': '#8899A8',

@@ -29,7 +29,7 @@ export const Hero = props => {
       {/* <!-- ====== Hero Section Start --> */}
       <div
         id='home'
-        className='relative overflow-hidden bg-[#FFE4E6] dark:bg-black pt-[120px] md:pt-[130px] lg:pt-[160px] pb-16 lg:pb-20'>
+        className='relative overflow-hidden bg-[#F3A8B3] dark:bg-black pt-[120px] md:pt-[130px] lg:pt-[160px] pb-16 lg:pb-20'>
         <div className='container'>
           <div className='-mx-4 flex flex-wrap items-center'>
             {/* 左侧：文字区域 */}
@@ -39,9 +39,9 @@ export const Hero = props => {
                 data-wow-delay='.2s'>
                 {/* 主标题 */}
                 <h1
-                  style={{ fontSize: 'clamp(1.25rem, 5.5vw, 2.75rem)' }}
-                  className='mb-6 font-bold leading-snug text-dark dark:text-white whitespace-nowrap'>
-                  {useStarterI18n('STARTER_HERO_TITLE_1', null, config)}
+                  className='mb-6 text-3xl font-bold leading-snug text-dark dark:text-white sm:text-4xl lg:text-[2.75rem] lg:leading-[1.2]'>
+                  <span className='block'>{useStarterI18n('STARTER_HERO_TITLE_1_LINE1', null, config)}</span>
+                  <span className='block'>{useStarterI18n('STARTER_HERO_TITLE_1_LINE2', null, config)}</span>
                 </h1>
                 {/* 次标题 */}
                 <p className='mb-9 max-w-[600px] text-base font-medium text-body-color dark:text-dark-6 sm:text-lg sm:leading-[1.44] mx-auto lg:mx-0'>
@@ -53,7 +53,7 @@ export const Hero = props => {
                     <li>
                       <SmartLink
                         href={siteConfig('STARTER_HERO_BUTTON_1_URL', '')}
-                        className='inline-flex items-center justify-center rounded-md bg-[#1e3a5f] px-7 py-[14px] text-center text-base font-medium text-white shadow-1 transition duration-300 ease-in-out hover:bg-[#162d4a]'>
+                        className='inline-flex items-center justify-center rounded-md bg-primary px-7 py-[14px] text-center text-base font-medium text-white shadow-1 transition duration-300 ease-in-out hover:bg-blue-dark'>
                         {heroButton1Icon && (
                           <img
                             className='mr-3 h-5 w-5'

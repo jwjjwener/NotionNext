@@ -16,6 +16,12 @@ const CONFIG = {
   STARTER_HERO_TITLE_1: 'Welcome to Jade Chinese Club!',
   STARTER_HERO_TITLE_1_CN: '欢迎来到翡翠中文俱乐部！',
   STARTER_HERO_TITLE_1_RO: 'Bine ați venit la Jade Chinese Club!',
+  STARTER_HERO_TITLE_1_LINE1: 'Welcome to',
+  STARTER_HERO_TITLE_1_LINE1_CN: '欢迎来到',
+  STARTER_HERO_TITLE_1_LINE1_RO: 'Bine ați venit la',
+  STARTER_HERO_TITLE_1_LINE2: 'Jade Chinese Club!',
+  STARTER_HERO_TITLE_1_LINE2_CN: '翡翠中文俱乐部！',
+  STARTER_HERO_TITLE_1_LINE2_RO: 'Jade Chinese Club!',
   STARTER_HERO_TITLE_2: '',
   // 英雄区两个按钮，如果TEXT留空则隐藏按钮
   STARTER_HERO_BUTTON_1_TEXT: 'Contact me',
