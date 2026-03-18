@@ -44,7 +44,7 @@ export const Features = () => {
                 <h4 className='mb-3 text-xl font-bold text-dark dark:text-white'>
                   {useStarterI18n('STARTER_FEATURE_1_TITLE_1')}
                 </h4>
-                <p className='mb-8 text-body-color dark:text-dark-6 lg:mb-9'>
+                <p className='mb-8 text-[#125FA3] dark:text-dark-6 lg:mb-9'>
                   {useStarterI18n('STARTER_FEATURE_1_TEXT_1')}
                 </p>
                 <SmartLink
@@ -70,7 +70,7 @@ export const Features = () => {
                 <h4 className='mb-3 text-xl font-bold text-dark dark:text-white'>
                   {useStarterI18n('STARTER_FEATURE_2_TITLE_1')}
                 </h4>
-                <p className='mb-8 text-body-color dark:text-dark-6 lg:mb-9'>
+                <p className='mb-8 text-[#125FA3] dark:text-dark-6 lg:mb-9'>
                   {useStarterI18n('STARTER_FEATURE_2_TEXT_1')}
                 </p>
                 <SmartLink
