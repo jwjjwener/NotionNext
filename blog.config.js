@@ -19,7 +19,7 @@ const BLOG = {
   BIO: process.env.NEXT_PUBLIC_BIO || '专业中文教学，让学习更简单', // 作者简介
   LINK: process.env.NEXT_PUBLIC_LINK || 'https://jadechineseclub.vercel.app', // 网站地址
   KEYWORDS: process.env.NEXT_PUBLIC_KEYWORD || '中文教学, 学中文, Chinese learning, Mandarin, 汉语课程', // 网站关键词 英文逗号隔开
-  BLOG_FAVICON: process.env.NEXT_PUBLIC_FAVICON || '/images/starter/logo/favicon-red.png', // blog favicon 配置
+  BLOG_FAVICON: process.env.NEXT_PUBLIC_FAVICON || '/images/starter/logo/mahjong-red.png', // blog favicon 配置
   BEI_AN: process.env.NEXT_PUBLIC_BEI_AN || '', // 备案号 闽ICP备XXXXXX
   BEI_AN_LINK: process.env.NEXT_PUBLIC_BEI_AN_LINK || 'https://beian.miit.gov.cn/', // 备案查询链接，如果用了萌备等备案请在这里填写
   BEI_AN_GONGAN: process.env.NEXT_PUBLIC_BEI_AN_GONGAN || '', // 公安备案号，例如 '浙公网安备3xxxxxxxx8号'
