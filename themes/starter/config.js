@@ -6,8 +6,8 @@
  */
 const CONFIG = {
   // 默认只展示Logo文字，如果设置了logo图片，会在文字左侧显示图标
-  STARTER_LOGO: '/images/starter/logo/mahjong-red.png', // 普通logo图片
-  STARTER_LOGO_WHITE: '/images/starter/logo/mahjong-red.png', // 透明底浅色logo
+  STARTER_LOGO: '/images/starter/logo/mahjong-red.svg', // 普通logo图片
+  STARTER_LOGO_WHITE: '/images/starter/logo/mahjong-red.svg', // 透明底浅色logo
 
   // MENU ， 菜单部分不在此处配置，请在Notion数据库中添加MENU
 
