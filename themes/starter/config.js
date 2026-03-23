@@ -152,9 +152,9 @@ const CONFIG = {
   STARTER_PRICING_1_FEATURES: 'Daily conversation practice,Topic discussions,Pronunciation correction,Cultural exchange',
   STARTER_PRICING_1_FEATURES_CN: '日常会话练习,兴趣主题讨论,发音纠正,文化交流',
   STARTER_PRICING_1_FEATURES_RO: 'Practică de conversație zilnică,Discuții pe teme diverse,Corectarea pronunției,Schimb cultural',
-  STARTER_PRICING_1_BUTTON_TEXT: 'Book a Trial',
-  STARTER_PRICING_1_BUTTON_TEXT_CN: '预约试课',
-  STARTER_PRICING_1_BUTTON_TEXT_RO: 'Rezervă o lecție de probă',
+  STARTER_PRICING_1_BUTTON_TEXT: 'Book',
+  STARTER_PRICING_1_BUTTON_TEXT_CN: '预约',
+  STARTER_PRICING_1_BUTTON_TEXT_RO: 'Rezervă',
   STARTER_PRICING_1_BUTTON_URL: 'https://jadechineseclub.vercel.app/payment',
 
   STARTER_PRICING_2_TAG: '',
@@ -174,9 +174,9 @@ const CONFIG = {
   STARTER_PRICING_2_FEATURES: 'Systematic teaching,HSK exam prep,Grammar intensive,Reading & writing,Mock exams',
   STARTER_PRICING_2_FEATURES_CN: '系统化教学,HSK考试辅导,语法精讲,阅读写作训练,模拟考试',
   STARTER_PRICING_2_FEATURES_RO: 'Predare sistematică,Pregătire examen HSK,Gramatică intensivă,Citire și scriere,Examene simulate',
-  STARTER_PRICING_2_BUTTON_TEXT: 'Book a Trial',
-  STARTER_PRICING_2_BUTTON_TEXT_CN: '预约试课',
-  STARTER_PRICING_2_BUTTON_TEXT_RO: 'Rezervă o lecție de probă',
+  STARTER_PRICING_2_BUTTON_TEXT: 'Book',
+  STARTER_PRICING_2_BUTTON_TEXT_CN: '预约',
+  STARTER_PRICING_2_BUTTON_TEXT_RO: 'Rezervă',
   STARTER_PRICING_2_BUTTON_URL: 'https://jadechineseclub.vercel.app/payment',
 
   STARTER_PRICING_3_TITLE: 'Business Chinese & Custom',
@@ -193,9 +193,9 @@ const CONFIG = {
   STARTER_PRICING_3_FEATURES: 'Business Chinese,Customized curriculum,Business consulting',
   STARTER_PRICING_3_FEATURES_CN: '商务中文,定制化教学方案,商务咨询服务',
   STARTER_PRICING_3_FEATURES_RO: 'Chineză de afaceri,Curriculum personalizat,Consultanță de afaceri',
-  STARTER_PRICING_3_BUTTON_TEXT: 'Book a Trial',
-  STARTER_PRICING_3_BUTTON_TEXT_CN: '预约试课',
-  STARTER_PRICING_3_BUTTON_TEXT_RO: 'Rezervă o lecție de probă',
+  STARTER_PRICING_3_BUTTON_TEXT: 'Book',
+  STARTER_PRICING_3_BUTTON_TEXT_CN: '预约',
+  STARTER_PRICING_3_BUTTON_TEXT_RO: 'Rezervă',
   STARTER_PRICING_3_BUTTON_URL: 'https://jadechineseclub.vercel.app/payment',
 
   // 用户评价区块
