@@ -72,7 +72,7 @@ const CONFIG = {
   STARTER_FEATURE_1_BUTTON_TEXT: 'Learn More',
   STARTER_FEATURE_1_BUTTON_TEXT_CN: '了解更多',
   STARTER_FEATURE_1_BUTTON_TEXT_RO: 'Află mai multe',
-  STARTER_FEATURE_1_BUTTON_URL: 'https://jadechineseclub.vercel.app/category/Chinese-Learning-Resource',
+  STARTER_FEATURE_1_BUTTON_URL: 'https://jadechineseclub.vercel.app/category/Chinese-Language-Learning',
 
   STARTER_FEATURE_2_TITLE_1: 'China Travel',
   STARTER_FEATURE_2_TITLE_1_CN: '中国旅行',
@@ -309,7 +309,7 @@ const CONFIG = {
       STARTER_TEAM_ITEM_DESCRIPTION: 'Chinese Teacher',
       STARTER_TEAM_ITEM_DESCRIPTION_CN: '中文教师',
       STARTER_TEAM_ITEM_DESCRIPTION_RO: 'Profesoară de chineză',
-      STARTER_TEAM_ITEM_URL: 'https://jadechineseclub.vercel.app/our-team/jade'
+      STARTER_TEAM_ITEM_URL: 'https://jadechineseclub.vercel.app/jade'
     },
     {
       STARTER_TEAM_ITEM_AVATAR: '/images/starter/team/teacher-02.jpg',
@@ -317,7 +317,7 @@ const CONFIG = {
       STARTER_TEAM_ITEM_DESCRIPTION: 'Chinese Teacher',
       STARTER_TEAM_ITEM_DESCRIPTION_CN: '中文教师',
       STARTER_TEAM_ITEM_DESCRIPTION_RO: 'Profesor de chineză',
-      STARTER_TEAM_ITEM_URL: 'https://jadechineseclub.vercel.app/our-team/xu'
+      STARTER_TEAM_ITEM_URL: 'https://jadechineseclub.vercel.app/xu'
     },
     {
       STARTER_TEAM_ITEM_AVATAR: '/images/starter/team/teacher-03.jpg',
@@ -325,7 +325,7 @@ const CONFIG = {
       STARTER_TEAM_ITEM_DESCRIPTION: 'Chinese Teacher',
       STARTER_TEAM_ITEM_DESCRIPTION_CN: '中文教师',
       STARTER_TEAM_ITEM_DESCRIPTION_RO: 'Profesor de chineză',
-      STARTER_TEAM_ITEM_URL: 'https://jadechineseclub.vercel.app/our-team/tao'
+      STARTER_TEAM_ITEM_URL: 'https://jadechineseclub.vercel.app/tao'
     }
   ],
 
