@@ -155,7 +155,7 @@ const CONFIG = {
   STARTER_PRICING_1_BUTTON_TEXT: 'Book a Trial',
   STARTER_PRICING_1_BUTTON_TEXT_CN: '预约试课',
   STARTER_PRICING_1_BUTTON_TEXT_RO: 'Rezervă o lecție de probă',
-  STARTER_PRICING_1_BUTTON_URL: 'https://wa.me/40748083168',
+  STARTER_PRICING_1_BUTTON_URL: 'https://jadechineseclub.vercel.app/payment',
 
   STARTER_PRICING_2_TAG: '',
   STARTER_PRICING_2_TAG_CN: '',
@@ -177,7 +177,7 @@ const CONFIG = {
   STARTER_PRICING_2_BUTTON_TEXT: 'Book a Trial',
   STARTER_PRICING_2_BUTTON_TEXT_CN: '预约试课',
   STARTER_PRICING_2_BUTTON_TEXT_RO: 'Rezervă o lecție de probă',
-  STARTER_PRICING_2_BUTTON_URL: 'https://wa.me/40748083168',
+  STARTER_PRICING_2_BUTTON_URL: 'https://jadechineseclub.vercel.app/payment',
 
   STARTER_PRICING_3_TITLE: 'Business Chinese & Custom',
   STARTER_PRICING_3_TITLE_CN: '商务中文 & 定制课程',
@@ -196,7 +196,7 @@ const CONFIG = {
   STARTER_PRICING_3_BUTTON_TEXT: 'Book a Trial',
   STARTER_PRICING_3_BUTTON_TEXT_CN: '预约试课',
   STARTER_PRICING_3_BUTTON_TEXT_RO: 'Rezervă o lecție de probă',
-  STARTER_PRICING_3_BUTTON_URL: 'https://wa.me/40748083168',
+  STARTER_PRICING_3_BUTTON_URL: 'https://jadechineseclub.vercel.app/payment',
 
   // 用户评价区块
   STARTER_TESTIMONIALS_ENABLE: true,
