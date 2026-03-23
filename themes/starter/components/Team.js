@@ -2,6 +2,7 @@
 import { siteConfig } from '@/lib/config'
 import { useStarterI18n } from '../hooks/useStarterI18n'
 import { useGlobal } from '@/lib/global'
+import SmartLink from '@/components/SmartLink'
 import { SVGAvatarBG } from './svg/SVGAvatarBG'
 
 export const Team = () => {
@@ -49,11 +50,21 @@ export const Team = () => {
                   <div className='group mb-8 rounded-xl bg-white px-5 pb-10 pt-12 shadow-testimonial dark:bg-[#111] dark:shadow-none'>
                     {/* 头像 */}
                     <div className='relative z-10 mx-auto mb-5 h-[120px] w-[120px]'>
-                      <img
-                        src={item.STARTER_TEAM_ITEM_AVATAR}
-                        alt='team image'
-                        className='h-[120px] w-[120px] rounded-full'
-                      />
+                      {item.STARTER_TEAM_ITEM_URL ? (
+                        <SmartLink href={item.STARTER_TEAM_ITEM_URL} className='block'>
+                          <img
+                            src={item.STARTER_TEAM_ITEM_AVATAR}
+                            alt='team image'
+                            className='h-[120px] w-[120px] rounded-full cursor-pointer hover:opacity-80 transition-opacity'
+                          />
+                        </SmartLink>
+                      ) : (
+                        <img
+                          src={item.STARTER_TEAM_ITEM_AVATAR}
+                          alt='team image'
+                          className='h-[120px] w-[120px] rounded-full'
+                        />
+                      )}
                       <span className='absolute bottom-0 left-0 -z-10 h-10 w-10 rounded-full bg-secondary opacity-0 transition-all group-hover:opacity-100'></span>
                       <span className='absolute right-0 top-0 -z-10 opacity-0 transition-all group-hover:opacity-100'>
                         <SVGAvatarBG />

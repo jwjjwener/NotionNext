@@ -272,9 +272,9 @@ const CONFIG = {
   STARTER_FAQ_2_QUESTION: 'How are the lessons conducted?',
   STARTER_FAQ_2_QUESTION_CN: '课程是如何进行的？',
   STARTER_FAQ_2_QUESTION_RO: 'Cum se desfășoară lecțiile?',
-  STARTER_FAQ_2_ANSWER: 'We conduct one-on-one teaching via online video, using professional textbooks and interactive tools to ensure an efficient learning experience. Each lesson is 45 minutes.',
-  STARTER_FAQ_2_ANSWER_CN: '我们通过线上视频进行一对一教学，使用专业教材和互动工具，确保高效的学习体验。每节课45分钟。',
-  STARTER_FAQ_2_ANSWER_RO: 'Predăm individual prin video online, folosind manuale profesionale și instrumente interactive. Fiecare lecție durează 45 de minute.',
+  STARTER_FAQ_2_ANSWER: 'We conduct one-on-one teaching via online video(applications, eg: Microsoft Teams, Voov ect.), using professional textbooks and interactive tools to ensure an efficient learning experience. Each lesson is 30 minutes.',
+  STARTER_FAQ_2_ANSWER_CN: '我们通过线上视频进行一对一教学，使用专业教材和互动工具，确保高效的学习体验。每节课30分钟。',
+  STARTER_FAQ_2_ANSWER_RO: 'Predăm individual prin video online(aplicatii, eg: Microsoft Teams, Voov ect.), folosind manuale profesionale și instrumente interactive. Fiecare lecție durează 30 de minute.',
 
   STARTER_FAQ_3_QUESTION: 'Can I learn without any Chinese background?',
   STARTER_FAQ_3_QUESTION_CN: '没有中文基础可以学吗？',
@@ -308,21 +308,24 @@ const CONFIG = {
       STARTER_TEAM_ITEM_NICKNAME: 'Jade',
       STARTER_TEAM_ITEM_DESCRIPTION: 'Chinese Teacher',
       STARTER_TEAM_ITEM_DESCRIPTION_CN: '中文教师',
-      STARTER_TEAM_ITEM_DESCRIPTION_RO: 'Profesoară de chineză'
+      STARTER_TEAM_ITEM_DESCRIPTION_RO: 'Profesoară de chineză',
+      STARTER_TEAM_ITEM_URL: 'https://jadechineseclub.vercel.app/jade'
     },
     {
       STARTER_TEAM_ITEM_AVATAR: '/images/starter/team/teacher-02.jpg',
       STARTER_TEAM_ITEM_NICKNAME: 'Xu',
       STARTER_TEAM_ITEM_DESCRIPTION: 'Chinese Teacher',
       STARTER_TEAM_ITEM_DESCRIPTION_CN: '中文教师',
-      STARTER_TEAM_ITEM_DESCRIPTION_RO: 'Profesor de chineză'
+      STARTER_TEAM_ITEM_DESCRIPTION_RO: 'Profesor de chineză',
+      STARTER_TEAM_ITEM_URL: 'https://jadechineseclub.vercel.app/xu'
     },
     {
       STARTER_TEAM_ITEM_AVATAR: '/images/starter/team/teacher-03.jpg',
       STARTER_TEAM_ITEM_NICKNAME: 'Tao',
       STARTER_TEAM_ITEM_DESCRIPTION: 'Chinese Teacher',
       STARTER_TEAM_ITEM_DESCRIPTION_CN: '中文教师',
-      STARTER_TEAM_ITEM_DESCRIPTION_RO: 'Profesor de chineză'
+      STARTER_TEAM_ITEM_DESCRIPTION_RO: 'Profesor de chineză',
+      STARTER_TEAM_ITEM_URL: 'https://jadechineseclub.vercel.app/tao'
     }
   ],
 
