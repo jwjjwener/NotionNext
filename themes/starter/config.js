@@ -28,8 +28,11 @@ const CONFIG = {
   STARTER_HERO_BUTTON_1_TEXT_CN: '联系我',
   STARTER_HERO_BUTTON_1_TEXT_RO: 'Contactați-mă',
   STARTER_HERO_BUTTON_1_URL: 'https://wa.me/40748083168',
-  STARTER_HERO_BUTTON_2_TEXT: '',
-  STARTER_HERO_BUTTON_2_URL: '',
+  STARTER_HERO_BUTTON_2_TEXT: 'Book a trial lesson',
+  STARTER_HERO_BUTTON_2_TEXT_CN: '预约试听课',
+  STARTER_HERO_BUTTON_2_TEXT_RO: 'Rezervă o lecție de probă',
+  STARTER_HERO_BUTTON_2_URL: 'https://jadechineseclub.vercel.app/payment',
+  STARTER_HERO_BUTTON_2_ICON: '/images/starter/icons/book-icon.png',
   STARTER_HERO_BUTTON_1_ICON: '/images/starter/whatsapp-new.svg',
 
   // 英雄区配图

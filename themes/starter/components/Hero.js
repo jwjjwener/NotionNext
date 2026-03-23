@@ -13,6 +13,7 @@ import { HeroCarousel } from './HeroCarousel'
 export const Hero = props => {
   const config = props?.NOTION_CONFIG || CONFIG
   const heroButton1Icon = siteConfig('STARTER_HERO_BUTTON_1_ICON', null, config)
+  const heroButton2Icon = siteConfig('STARTER_HERO_BUTTON_2_ICON', null, config)
 
   // 轮播图片：数组配置直接从 CONFIG 读取（siteConfig 不能可靠处理数组）
   const carouselImages = CONFIG.STARTER_HERO_CAROUSEL_IMAGES || []
@@ -53,7 +54,7 @@ export const Hero = props => {
                     <li>
                       <SmartLink
                         href={siteConfig('STARTER_HERO_BUTTON_1_URL', '')}
-                        className='inline-flex items-center justify-center rounded-md bg-[#D4E9F7] px-7 py-[14px] text-center text-base font-medium text-[#01367A] shadow-1 transition duration-300 ease-in-out hover:bg-[#b8d9f0]'>
+                        className='inline-flex items-center justify-center rounded-md bg-[#C7D2FE] px-7 py-[14px] text-center text-base font-medium text-[#312E81] shadow-1 transition duration-300 ease-in-out hover:bg-[#A5B4FC]'>
                         {heroButton1Icon && (
                           <img
                             className='mr-3 h-5 w-5'
@@ -62,6 +63,22 @@ export const Hero = props => {
                           />
                         )}
                         {useStarterI18n('STARTER_HERO_BUTTON_1_TEXT', null, config)}
+                      </SmartLink>
+                    </li>
+                  )}
+                  {useStarterI18n('STARTER_HERO_BUTTON_2_TEXT', null, config) && (
+                    <li>
+                      <SmartLink
+                        href={siteConfig('STARTER_HERO_BUTTON_2_URL', '')}
+                        className='inline-flex items-center justify-center rounded-md bg-[#C7D2FE] px-7 py-[14px] text-center text-base font-medium text-[#312E81] shadow-1 transition duration-300 ease-in-out hover:bg-[#A5B4FC]'>
+                        {heroButton2Icon && (
+                          <img
+                            className='mr-3 h-5 w-5'
+                            src={heroButton2Icon}
+                            alt='button icon'
+                          />
+                        )}
+                        {useStarterI18n('STARTER_HERO_BUTTON_2_TEXT', null, config)}
                       </SmartLink>
                     </li>
                   )}
