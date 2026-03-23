@@ -309,7 +309,7 @@ const CONFIG = {
       STARTER_TEAM_ITEM_DESCRIPTION: 'Chinese Teacher',
       STARTER_TEAM_ITEM_DESCRIPTION_CN: '中文教师',
       STARTER_TEAM_ITEM_DESCRIPTION_RO: 'Profesoară de chineză',
-      STARTER_TEAM_ITEM_URL: 'https://jadechineseclub.vercel.app/jade'
+      STARTER_TEAM_ITEM_URL: 'https://jadechineseclub.vercel.app/Our-Team/jade'
     },
     {
       STARTER_TEAM_ITEM_AVATAR: '/images/starter/team/teacher-02.jpg',
@@ -317,7 +317,7 @@ const CONFIG = {
       STARTER_TEAM_ITEM_DESCRIPTION: 'Chinese Teacher',
       STARTER_TEAM_ITEM_DESCRIPTION_CN: '中文教师',
       STARTER_TEAM_ITEM_DESCRIPTION_RO: 'Profesor de chineză',
-      STARTER_TEAM_ITEM_URL: 'https://jadechineseclub.vercel.app/xu'
+      STARTER_TEAM_ITEM_URL: 'https://jadechineseclub.vercel.app/Our-Team/xu'
     },
     {
       STARTER_TEAM_ITEM_AVATAR: '/images/starter/team/teacher-03.jpg',
@@ -325,7 +325,7 @@ const CONFIG = {
       STARTER_TEAM_ITEM_DESCRIPTION: 'Chinese Teacher',
       STARTER_TEAM_ITEM_DESCRIPTION_CN: '中文教师',
       STARTER_TEAM_ITEM_DESCRIPTION_RO: 'Profesor de chineză',
-      STARTER_TEAM_ITEM_URL: 'https://jadechineseclub.vercel.app/tao'
+      STARTER_TEAM_ITEM_URL: 'https://jadechineseclub.vercel.app/Our-Team/tao'
     }
   ],
 
